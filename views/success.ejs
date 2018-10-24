@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <title> Provide Information</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+</head>
+
+<body>
+    <div class="mobile-notice">
+
+        <script>
+            if(navigator.userAgent.match(/Android/i)
+  || navigator.userAgent.match(/webOS/i)
+  || navigator.userAgent.match(/iPhone/i)
+  || navigator.userAgent.match(/iPad/i)
+  || navigator.userAgent.match(/iPod/i)
+  || navigator.userAgent.match(/BlackBerry/i)
+  || navigator.userAgent.match(/Windows Phone/i)) {
+    document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+}
+</script>
+
+        <div class="inner-mob">
+            <div class="mob-head">
+                <img src="img/logo.PNG">
+                <div class="mob-right"> Home</div>
+            </div>
+            <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+            <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+            <div class="input-box ">
+                <p class="input-label">Email Address</p>
+                <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text">
+            </div>
+            <div class="mob-submit">Subscribe</div>
+        </div>
+
+
+    </div>
+    <div id="wrapper">
+            <%- include('./header'); %>
+
+        <div class="new-prof-info-cover">
+        <img  src="img/beach-cover.png">
+        </div>
+        <div class="container">
+            <div class="new-prof-info-head-c">
+                <h1><%=trip.title  %></h1>
+                <div class="new-notch">
+                    <div class="cover-dp"></div>
+                    <div class="n-notch">
+                        <a class="cover-name">Ryan Shirley </a>
+                        <a class="cover-handle">@ryan.shirley</a>
+                    </div>
+                </div>
+            </div>
+            <div id="divider"></div>
+            <div class="prov-info-btn-c">
+                <div class="prov-info-btn-i1">
+                    <h>Duration </h><br>
+                    <%=trip.days %> Nights
+                </div>
+                <div class="prov-info-btn-i2">
+                    <h>Locations</h><br>
+                    Zakynthos, Metora and Athens
+                </div>
+                <div class="prov-info-btn-i3">info</div>
+                <div class="prov-info-btn-i4">flights</div>
+                <div class="prov-info-btn-i5  prov-info-btn-sel">itinerary</div>
+                <div class="prov-info-btn-i6">book</div>
+
+            </div>
+            <div id="divider"></div>
+        <div class="bookin-cnf-cn">
+            <img src="img/qr-code.png">
+            <div class="bookin-cnf-center">
+            <div class="bookin-cnf-center-head">
+                congratulations! your booking for <bl>flights</bl> is confirmed
+                </div>
+                <div class="bookin-cnf-center-table">
+                <div class="bookin-cnf-center-table-head">
+                    <div class="col1">trift flights booking number</div>
+                    <div class="col2">PNR number</div>
+                    <div class="col3">status</div>
+                    </div>
+                    
+                 <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2"><%= pnr  %> </div>
+                    <div class="col3">success </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="bookin-cnf-right">
+      <a href="/callitineary?parem=<%= tripid %>">  <div class="bookin-cnf-btn">Manage</div></a>
+                   <div class="bookin-cnf-btn bookin-cnf-btn-teal">Print Flights</div>
+            </div>
+            </div>
+            <div id="divider"></div>
+          <!--   <div class="bookin-cnf-cn">
+           <img src="img/qr-code.png">
+            <div class="bookin-cnf-center">
+            <div class="bookin-cnf-center-head">
+                congratulations! your booking for <bl> hotels </bl> is confirmed
+                </div>
+                <div class="bookin-cnf-center-table">
+                <div class="bookin-cnf-center-table-head">
+                    <div class="col1">trift hotels booking number</div>
+                    <div class="col2">booking number</div>
+                    <div class="col3">status</div>
+                    </div>
+                 <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2">OCQYHA </div>
+                    <div class="col3">success </div>
+                    </div>
+                     <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2">OCQYHA </div>
+                    <div class="col3">success </div>
+                    </div>
+                     <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2">OCQYHA </div>
+                    <div class="col3">success </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="bookin-cnf-right">
+        <div class="bookin-cnf-btn">Manage</div>
+                   <div class="bookin-cnf-btn bookin-cnf-btn-teal">Print Hotels</div>
+            </div>
+            </div>
+            <div id="divider"></div>
+            <div class="bookin-cnf-cn">
+            <img src="img/qr-code.png">
+            <div class="bookin-cnf-center">
+            <div class="bookin-cnf-center-head">
+                congratulations! your booking for <bl>activities</bl> is confirmed
+                </div>
+                <div class="bookin-cnf-center-table">
+                <div class="bookin-cnf-center-table-head">
+                    <div class="col1">trift flights booking number</div>
+                    <div class="col2">PNR number</div>
+                    <div class="col3">status</div>
+                    </div>
+                 <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2">OCQYHA </div>
+                    <div class="col3">success </div>
+                    </div>
+                     <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2">OCQYHA </div>
+                    <div class="col3">success </div>
+                    </div>
+                     <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2">OCQYHA </div>
+                    <div class="col3">success </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bookin-cnf-right">
+        <div class="bookin-cnf-btn">Manage</div>
+                   <div class="bookin-cnf-btn bookin-cnf-btn-teal">Print Activities</div>
+            </div>
+            </div>-->
+            <div id="divider"></div>
+        
+        </div></div>
+    
+        <div class="footer-space"></div>
+    <div id="footer">
+        <div id="divider"></div>
+        <div class="footer-inner">
+            <div class="footer-text"><b>Booking Confirmed</b>
+            </div>
+
+		<button class="pref-submit pref-submit-green">Print your Itinerary</button>
+		<button class="pref-submit pref-submit-green">Print All Bookings</button>
+     	<button class="pref-submit pref-submit-sm">Add More Elements</button>
+        </div>
+    </div>
+    
+    </body></html>

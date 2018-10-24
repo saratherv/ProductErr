@@ -1,0 +1,38 @@
+.landing-bar {
+    height: 33px;
+    clear: both;
+    margin-bottom: 33px;
+}
+#filter {
+    
+    float: left;
+}
+#by-price {
+    padding: 12px 12px 10px 15px;
+    float: left;
+    cursor: pointer;
+    font-size: 11.2px;
+    font-family: $f  ; letter-spacing :  0.1px;
+}
+.landbar-notch {
+    cursor: pointer;
+    background-color: $deep-sky-blue;
+    border-radius: 4px;
+    float: right;
+    height: 33px;
+    width: 33px;
+
+    margin-right: 15px;
+}
+.bl-box {
+    cursor: pointer;
+    color: white;
+    padding: 11px 12px 0px 15px;
+    margin-left: 18px;
+    font-size: 12.8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-family: $fb;
+    background-color: $black;
+    height: 22px
+}

@@ -1,0 +1,270 @@
+
+.slider {
+	max-height: 394px;
+	margin-top: 48px;
+}
+
+.search {
+	@include sh-box;
+	height: 40px;
+	width: 100%;
+	margin-bottom: 33px;
+}
+.s-icon {
+	float: left;
+	margin-left: 24px;
+	margin-top: 10px;
+}
+
+#search-input {
+	margin-left: 8px;
+	padding-top: 7px;
+	height: 80%;
+	border: 0;
+	-webkit-appearance: none;
+	font-family: $fm;
+	width: 90%;
+
+}
+
+
+#include {
+
+	float: right;
+}
+
+#flight {}
+
+#bed {}
+
+.trip-component {
+
+	margin-top: 33px;
+}
+
+.trip-heading {
+	height: 23px;
+
+
+}
+
+.ttitle {
+	margin: 0px;
+	float: left;
+	font-size: 22.4px;
+	font-family: $fb;
+    cursor: default;
+}
+
+#show-more {
+	padding: 3px;
+	float: right;
+	font-size: 11.2px;
+	font-family: $f  ; letter-spacing :  0.1px;
+	color: $black;
+}
+
+.trip-carousal {
+	margin-top: 18px;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.trip-container {
+	@include sh-box;
+	width: 195px;
+	height: 284px;
+	margin-right: 53px;
+	cursor: pointer;
+}
+
+.photo {
+	width: 195px;
+	height: 146px;
+	border-radius: 8px 8px 0px 0px;
+	border-radius-top: 8px;
+	
+        background-image: url("../img/Photo.png");
+    
+}
+
+
+
+.tr-nights {
+	font-size: 12px;
+	color: #ffffff;
+	border-radius: 5px;
+	background-color: $deep-sky-blue;
+	padding: 4px 12px 1px 12px;
+	width: max-content;
+
+	font-family: $f  ; letter-spacing :  0.1px;
+	margin: 14px 0px 0px 16px;
+
+}
+
+.trip-title {
+    cursor: default;
+	line-height: 1.33;
+	margin-left: 16px;
+	font-size: 14.4px;
+	font-family: $fb;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: 10px;
+
+}
+
+.trip-creater {
+	font-size: 11.2px;
+	margin-left: 16px;
+	margin-top: 10px;
+	color: #8f8f8f;
+	font-family: $fm;
+}
+
+.trip-curr {
+	float: right;
+
+	font-family: $fb;
+	font-size: 11.2px;
+	font-weight: bold;
+	margin-right: 5px;
+	margin-top: 1px;
+	letter-spacing: -0.3px;
+	text-align: right;
+	color: $black;
+}
+
+.trip-price {
+	float: right;
+	font-family: $fb;
+	font-size: 12.8px;
+	margin-right: 17px;
+	font-weight: bold;
+	letter-spacing: -0.3px;
+
+	color: $black;
+}
+
+.trip-containerl {
+	margin-right: 0;
+
+}
+
+
+#section2 {
+	margin-top: 89px;
+	display: flex;
+	flex-wrap: nowrap;
+
+
+}
+
+.rectangle {
+	width: 447px;
+	height: 339px;
+	border-radius: 8px;
+	background-color: $white-two;
+}
+
+
+.two {
+	display: flex;
+}
+
+.col2 {
+	margin-left: auto;
+	h1 {
+
+		margin-top: 0;
+	}
+}
+
+.wide-rectangle {
+	width: 946px;
+	height: 315px;
+	border-radius: 8px;
+	background-color: $white-two;
+	margin-top: 98px;
+	margin-bottom: 37px;
+}
+
+.site-cards {
+
+	display: flex;
+}
+
+.cards {
+	margin-top: 53px;
+	margin-right: auto;
+	margin-bottom: 41px;
+	width: 233px;
+}
+
+.card-icon {
+	object-fit: contain;
+	height: 47px;
+}
+
+.card-title {
+    cursor:default;
+	margin-top: 14px;
+	font-family: $fb;
+	font-size: 17.6px;
+	color: $black;
+	font-weight: bold;
+}
+
+.card-disc {
+	font-family: $f  ; letter-spacing :  0.1px;
+	font-size: 13.6px;
+	color: $black;
+}
+
+.cardsl {
+	margin-right: 0;
+}
+
+#sectionc {
+	margin-top: 50px;
+}
+
+#si {
+	font-size: 22.4px;
+}
+
+
+
+
+
+.airport {
+	display: table;
+
+}
+
+
+
+
+
+.middle-border {
+	display: table-cell;
+	height: 100%;
+	width: 4.8px;
+
+	border-radius: 4.4px;
+	background-color: #e6e6e6;
+
+}
+
+
+
+
+
+
+
+.at-heading {
+	padding-top: 20px;
+	font-display: $fb;
+	font-size: 14.4px;
+}

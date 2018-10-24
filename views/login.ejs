@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title> Login</title>
+	<link href="css/login-signup.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script>
+    function hideagain(){
+        var element = document.getElementById("loginhid");
+       element.classList.remove('visible');
+       console.log('clicked');
+    }
+    </script>
+</head>
+    <body>
+            <form action="/lognow" method="post">
+                <input type= "text" id ="url" name ="url" hidden>
+                <script>document.getElementById("url").value = document.URL</script>
+        <div class="black-container black-container-visible" id="loginhid" >
+            
+            <div class="signup-box">
+                <div class="sign-form">
+                    
+                   <div class="sign-heading" onclick="hideagain()">
+                        <div class="sign-title">Log in</div>
+                         <!-- <svg  class="sign-cross" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path  d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg> -->
+                    </div>
+                     <div class="input-box">
+                                <p class="input-label">Email Address</p>
+                                <input class="textI " name="email" placeholder="jtarunkrishna@gmail.com" type="text" required></div>
+                          
+                     <div class="input-box ">
+                                <p class="input-label">Enter Password</p>
+                                <input class="textI " name="password" placeholder="*********" type="password" required=true></div>
+                   
+                    <button type="submit" class="prof-btn">Log In</button>
+                    <div id="divider"></div>
+                    <div class="fb-btn"><img class="btn-logo" src="img/fb.png">Continue with Facebook</div>
+                     <div class="gl-btn"><img class="btn-logo" src="img/gl.png">Continue with Google</div>
+                    
+                </div></div>
+            
+        </div>
+    </form>
+    <div class="mobile-notice">
+          
+            <script>
+  if(navigator.userAgent.match(/Android/i)
+    || navigator.userAgent.match(/webOS/i)
+    || navigator.userAgent.match(/iPhone/i)
+    || navigator.userAgent.match(/iPad/i)
+    || navigator.userAgent.match(/iPod/i)
+    || navigator.userAgent.match(/BlackBerry/i)
+    || navigator.userAgent.match(/Windows Phone/i)) {
+      document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+  }
+  </script>
+            
+              <div class="inner-mob">
+                  <div class="mob-head">
+                  <img src="img/logo.PNG">
+                   <div class="mob-right"> Home</div>
+                  </div>
+              <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+              <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+                      <div class="input-box ">
+                                      <p class="input-label">Email Address</p>
+                                      <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text"></div>
+                  <div class="mob-submit">Subscribe</div>
+              </div>
+          
+          
+          </div>
+    </body>

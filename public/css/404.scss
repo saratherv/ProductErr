@@ -1,0 +1,68 @@
+@import "modules/super.scss";
+@import "modules/landing-menu.scss";
+@import "modules/footer.scss";
+@import "modules/common.scss";
+@import "modules/_forms.scss";
+.error-l-cover {
+    margin-top: 3px;
+    background-image: url("../img/404.png");
+
+    background-size: cover;
+  max-width: 1440px;
+  max-height: 872px;
+    overflow: hidden;
+
+}
+
+.error-container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.error-cover-text {
+    font-family: $f;
+    font-size: 40px;
+    color: white;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: bold;
+     width: fit-content;
+    margin: 15% auto 0 auto;
+ 
+}
+
+.error-cover-btn {
+    @include sm-btn;
+    position: relative;
+    width: fit-content;
+    margin: 1.5% auto 0 auto;
+
+    padding: 13px 1px 12px 1px;
+    width: 139px !important;
+    font-size: 16.4px;
+    box-shadow: none;
+}
+
+.error-cover-sub {
+    font-family: $fm;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    line-height: 1.4;
+    position: relative;
+    text-align: center;
+  width: fit-content;
+    margin: 2% auto 0 auto;
+
+}
+
+.error-cover-subl {
+   margin: 22% auto 15% auto;
+    font-family: $fr;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+

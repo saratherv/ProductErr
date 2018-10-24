@@ -1,0 +1,25 @@
+
+
+.tagline-container {
+    display: table;
+   margin-bottom:40px;
+   
+    width: 100%;
+    h1 {
+        cursor: default;
+        font-size: 25.6px;
+        display: table-cell;
+        width: 80%;
+    }
+}
+.nights {
+    @include Type-1;
+    float: right;
+    @include nights;
+    display: table-cell;
+}
+
+.tagline {
+    font-family: $fb;
+    cursor: default;
+}

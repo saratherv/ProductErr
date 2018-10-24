@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="118px" height="153px" viewBox="0 0 118 153" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>4E029854-32CF-4833-90DD-100D05AB6375</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M1122.92911,275 C1122.44388,278.392294 1119.52647,281 1116,281 L1104,281 C1100.47353,281 1097.55612,278.392294 1097.07089,275 L1069.2,275 C1065.22355,275 1062,271.77645 1062,267.8 L1062,157.2 C1062,153.22355 1065.22355,150 1069.2,150 L1150.8,150 C1154.77645,150 1158,153.22355 1158,157.2 L1158,267.8 C1158,271.77645 1154.77645,275 1150.8,275 L1122.92911,275 Z" id="path-1"></path>
+        <filter x="-17.7%" y="-11.5%" width="137.5%" height="127.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="1" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.772613733   0 0 0 0 0.772613733   0 0 0 0 0.772613733  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Assets" transform="translate(-1052.000000, -142.000000)">
+            <g id="Combined-Shape">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#2789F0" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

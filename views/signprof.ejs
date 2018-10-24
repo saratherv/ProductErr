@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title> Signup Preferences</title>
+	<link href="css/login-signup.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="js/info.js"></script>
+
+</head>
+    <body>
+        <div class="black-container visible ">  
+            <div class="signup-box">
+                <form action="savepref" method="post">
+                    <input type= 'text' hidden name = 'email' value = <%= email %> >
+                <div class="sign-form">
+                    <div class="sign-heading">
+                        <div class="sign-title">Interests and Preferences</div> 
+                    </div>
+                    <div class="sign-inner">
+                    
+                        <div class="sign-col1">    <div class="pref-box pref-box5">
+                            <div class="bl-title">International Transfers</div>
+                            <ul class="pref-list">
+                                <li>Flights</li>
+                            </ul>
+                        </div>
+                        <div class="pref-box pref-box1">
+                              <div class="bl-title">Food</div>
+                            <ul class="pref-list">
+                                <li>Local Cuisine</li>
+                                <li>Indian</li>
+                                <li>Chinese</li>
+                            </ul>
+                            
+                         
+                            
+                            
+                            
+                        </div>
+                        <div class="pref-box pref-box2">
+                            
+                              <div class="bl-title">Local Transportation</div>
+                            <ul class="pref-list">
+                                <li>Google Maps</li>
+                            </ul>
+                            
+                            
+                          
+                        </div>
+                        <div class="pref-box pref-box3">
+                           <div class="bl-title">Hotels</div>
+                            <ul class="pref-list">
+                                <li>Budget Hotels</li>
+                                
+                            </ul>
+                        </div>
+						 <div class="pref-box  pref-box4">
+                             
+                             <div class="bl-title">Activities</div>
+                            <ul class="pref-list">
+                                <li>Family Holidays</li>
+                                <li>Adventure</li>
+                            </ul>
+                        </div>
+                        
+                        
+                        </div>
+                        <div class="sign-col2">
+                            <div class="sign-pref1">  <div class="twocol">
+                           <div class=" input-box">
+				<p class="input-label">Preferred Outbound Travel Option</p>
+				<div class="sh-box  ">
+                    <input type="text" value="flights" name="flightvalue" hidden>
+                    <div class="textI ddate"> Flights</div>
+					<!--<svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    // Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -
+    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd">
+        <g id="Assets" transform="translate(-964.000000, -205.000000)"  >
+            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+        </g>
+    </g>
+</svg>-->
+                               </div></div></div></div>
+                            <div class="sign-pref2">
+                            <div class="twocol">
+                           <div class=" input-box" style="width:238px;">
+                <p class="input-label">Select three types of Cuisine</p>
+                <div class="sh-box  ">
+                    <input type="text" hidden value="Local Cuisine" id="foodvalue" name="foodvalue">
+                    <div class="textI ddate" onclick="signuprefhide('hidefood')" id="fooddiv"> Local Cuisine</div>
+                    <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        // Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -
+                        <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                        <desc>Created with sketchtool.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd">
+                            <g id="Assets" transform="translate(-964.000000, -205.000000)"  >
+                                <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                            </g>
+                        </g>
+                    </svg>
+                               </div>
+               <div id="hidefood">
+                               <div class="sh-box  ">
+                                <div class="textI ddate" onclick="valueChange('foodvalue','Indian','fooddiv','hidefood')"> Indian</div>
+                               
+                                            </div>
+                                     <div class="sh-box  ">
+                                                <div class="textI ddate" onclick="valueChange('foodvalue','Chinese','fooddiv','hidefood')"> Chinese</div>
+                                               
+                                         </div>
+
+                                         <div class="sh-box  ">
+                                            <div class="textI ddate" onclick="valueChange('foodvalue','Continental','fooddiv','hidefood')"> Continental</div>
+                                           
+                                                        </div></div>
+                               
+                               </div></div>
+                            
+                            </div>
+                            <div class="sign-pref3"><div class="twocol">
+                               <div class=" input-box">
+                                   <input type="text" value="google maps" name="localtvalue" hidden>
+				<p class="input-label">How would you like to get around?</p>
+				<div class="sh-box  ">
+                    <div class="textI ddate"> Use Google Maps</div>
+				<!--	<svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+     Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch 
+    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd">
+        <g id="Assets" transform="translate(-964.000000, -205.000000)"  >
+            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+        </g>
+    </g>
+</svg>-->
+                                   </div></div></div></div>
+                            
+                            
+                        <div class="sign-pref4">
+                        <div class="twocol">
+                            <div class=" input-box" style="width: 238px;">
+				<p class="input-label">Where would you prefer to stay?</p>
+				<div class="sh-box  ">
+                    <input type="text" hidden value="Budget Hotels" id="hotelvalue" name="hotelvalue">
+                    <div class="textI ddate" onclick="signuprefhide('hidehotels')" id="hoteldiv"> Budget Hotels</div>
+                    <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch 
+                       <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                       <desc>Created with sketchtool.</desc>
+                       <defs></defs>
+                       <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd">
+                           <g id="Assets" transform="translate(-964.000000, -205.000000)"  >
+                               <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                           </g>
+                       </g>
+                   </svg>
+					
+                                </div>
+                                <div id="hidehotels">
+                                <div class="sh-box  ">
+                                    <div class="textI ddate" onclick="valueChange('hotelvalue','Luxury Hotels','hoteldiv','hidehotels')"> Luxury Hotels</div>
+                                   
+                                                </div>
+                                                <div class="sh-box  ">
+                                                    <div class="textI ddate" onclick="valueChange('hotelvalue','Best Rated Hotels','hoteldiv','hidehotels')"> Best Rated Hotels </div>
+                                                    
+                                                                </div></div></div></div>
+                        </div>
+                            <div class="sign-pref5">
+                            
+                            <div class="twocol">
+                           <div class=" input-box" style="width: 238px;">
+				<p class="input-label">Select three types of Activities</p>
+				<div class="sh-box  ">
+                    <input type="text" value="Family Holidays" hidden id="activityvalue" name="activityvalue">
+                    <div class="textI ddate" onclick="signuprefhide('activityhide')" id="activitydiv"> Family Holidays</div>
+					<svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch 
+                       <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                       <desc>Created with sketchtool.</desc>
+                       <defs></defs>
+                       <g id="Page-1" stroke="none" stroke-width="1"  fill-rule="evenodd">
+                           <g id="Assets" transform="translate(-964.000000, -205.000000)"  >
+                               <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                           </g>
+                       </g>
+                   </svg>
+                               </div>
+                               <div id="activityhide">
+                                <div class="sh-box  ">
+                    <div class="textI ddate" onclick="valueChange('activityvalue','Adventure' ,'activitydiv','activityhide')"> Adventure</div>
+					
+                               </div>
+                                <div class="sh-box  ">
+                    <div class="textI ddate" onclick="valueChange('activityvalue','Audio Trips','activitydiv','activityhide')"> Audio Trips</div>
+					
+                               </div>
+                            </div>
+                            </div></div>
+                            
+                            
+                            </div>
+                        </div>
+                    </div>
+                <button class="prof-btn prof-btn-pref" type="submit"> Let’s Get Started
+                </button>
+               
+                </div></form></div>
+            
+            
+            
+        </div>
+        <div class="mobile-notice">
+          
+                <script>
+      if(navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)) {
+          document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+      }
+      </script>
+                
+                  <div class="inner-mob">
+                      <div class="mob-head">
+                      <img src="img/logo.PNG">
+                       <div class="mob-right"> Home</div>
+                      </div>
+                  <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+                  <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+                          <div class="input-box ">
+                                          <p class="input-label">Email Address</p>
+                                          <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text"></div>
+                      <div class="mob-submit">Subscribe</div>
+                  </div>
+              
+              
+              </div>
+    </body></html>

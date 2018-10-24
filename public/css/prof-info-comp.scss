@@ -1,0 +1,19 @@
+@import "modules/super.scss";
+@import "modules/forms.scss";
+@import "modules/common.scss";
+@import "modules/dropdown.scss";
+@import "modules/prof-info.scss";
+
+
+.twocol {
+
+	width: 100%;
+	display: table;
+	margin-bottom: 27px;
+	.input-box {
+       
+		display: table-cell;
+	}
+ 
+   
+}

@@ -1,0 +1,281 @@
+.select-values-container {
+  height: fit-content;
+
+  padding: 10px 0px;
+}
+
+.select-values-wrapper {
+  @include sh-box;
+  height: fit-content;
+  margin-top: 8px;
+  background-color: white;
+}
+
+.value {
+  margin-top: 5px;
+  margin-left: 8.8px;
+  font-family: $fm;
+  font-size: 13.2px;
+  color: $greyish-brown;
+  cursor: pointer;
+}
+
+.select-value-wrapper {
+  display: flex;
+  height: 19px;
+  padding: 5.6px 20px;
+}
+
+.value-border {
+  width: 3.2px;
+  height: 100%;
+  border-radius: 1.6px;
+  background-color: $deep-sky-blue;
+}
+
+.form-container {
+  width: 449px;
+
+  color: $greyish-brown;
+}
+
+.twocol {
+  width: 100%;
+  display: flex;
+  margin-bottom: 27px;
+  .input-box {
+    font-size: 13.2px;
+    display: table-cell;
+    margin-bottom: 0px;
+  }
+  .input-box2 {
+    margin-left: auto !important;
+  }
+  .input-box2 .sh-box {
+    width: 104% !important;
+  }
+  .sh-box {
+    cursor: pointer;
+    width: max-content;
+    display: flex;
+  }
+
+  .textI {
+    height: auto;
+    padding: 14px 60px 14px 14px;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown :after {
+  @include dropdown;
+}
+
+.ddate {
+  width: 1px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.drpar {
+  width: 8px;
+  height: 8px;
+  fill: #2789f0;
+  position: relative;
+  top: 16px;
+  right: 24px;
+}
+
+.select-calender-wrapper {
+  @extend .select-values-wrapper;
+  width: 95%;
+}
+
+.calender-head {
+  display: flex;
+  padding: 11.2px 21.6px 9.4px 21.6px;
+  #l-cal-arrow,
+  #r-cal-arrow {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    fill: $deep-sky-blue;
+  }
+}
+
+#l-cal-arrow {
+  transform: rotate(90deg);
+}
+
+#cal-month {
+  font-family: $fm;
+  font-size: 11.7px;
+  line-height: 16.8px;
+  margin: auto;
+}
+
+#r-cal-arrow {
+  transform: rotate(270deg);
+}
+
+.dates-container {
+  padding: 18.4px;
+  grid-gap: 8px;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-template: " 1fr 1fr 1fr 1fr 1fr 1fr 1fr";
+  font-family: $fm;
+  font-size: 11.7px;
+  .cal-day {
+    font-size: 8.5px;
+  }
+  .selected,
+  day:hover {
+    background-color: $deep-sky-blue;
+    border-radius: 50%;
+    color: white;
+  }
+  div,
+  day {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 6px;
+    width: 22.4px;
+    height: 16.4px;
+  }
+}
+
+.passenger-sel-wrapper {
+  @extend .select-values-wrapper;
+  height: 40px;
+  width: 100%;
+  .tt {
+    margin-left: 12px;
+    margin-top: 14px;
+  }
+  .tt,
+  div {
+    font-family: $fm;
+    font-size: 13.2px;
+  }
+  plus,
+  red {
+    cursor: pointer;
+    padding: 0px 13px;
+
+    font-size: 20.5px;
+    color: $deep-sky-blue;
+  }
+}
+
+.passenger-sel-container {
+  display: flex;
+}
+
+.sel-counter {
+  margin-left: auto;
+
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.passengers {
+  font-size: 13.2px;
+  width: 238px;
+  .textI {
+    display: flex;
+    height: auto;
+    padding: 14px 60px 14px 14px;
+  }
+
+  .sh-box {
+    cursor: pointer;
+    display: flex;
+  }
+}
+
+.blue-back {
+  background-color: $deep-sky-blue;
+  color: white;
+  plus,
+  red {
+    color: white;
+  }
+}
+
+.flight-class {
+  width: 193px;
+  @extend .passengers;
+  .sh-box {
+    width: 106%;
+  }
+}
+
+.drp-cn {
+  display: flex;
+  .active-cn,
+  .inactive-cn,
+  .focus-cn {
+    margin-right: 120px;
+  }
+}
+
+.dep-city {
+}
+
+.focused {
+  .textI {
+    box-shadow: 1px 3px 10px 1px rgba(209, 216, 252, 1);
+  }
+}
+
+.inactive {
+  filter: grayscale(100%) opacity(50%);
+  svg,
+  .textI {
+    cursor: default;
+  }
+}
+.algolia-autocomplete {
+  width: 104%;
+}
+.aa-dropdown-menu {
+  background-color: white;
+  @extend .select-values-container;
+  width: 96%;
+}
+.passenger-sub {
+  z-index: 1;
+  position: absolute;
+  width: 194px;
+}
+.dropdown-input {
+  position: absolute;
+  width: 85px;
+  z-index: 1;
+  background-color: white;
+}
+
+.years-container {
+  @extend .dates-container;
+  grid-template: "1fr 1fr 1fr 1fr";
+  width: 200px;
+  height: 150px;
+  margin: auto;
+  grid-gap: 4px;
+  padding: 30px 25px 31px 25px;
+  day {
+    margin-left: 5px;
+    width: 37px;
+    height: 16.4px;
+  }
+}
+
+.mnt-container {
+  height: 94px;
+  padding: 59px 25px 58px 25px;
+  @extend .years-container;
+}

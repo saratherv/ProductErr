@@ -1,0 +1,43 @@
+.the-footer {
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+}
+
+.ft-col {
+    float: left;
+    font-family: $f;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    color: $greyish-brown;
+    margin: 49px 66px 60px 0px;
+}
+
+.ft-col-h {
+    margin-bottom: 20px;
+}
+
+.ft-col-l {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.copy-stat {
+    float: right;
+    position: relative;
+    top: 100px;
+    font-family: $f;
+    font-size: 14px;
+
+    font-weight: 500;
+    color: $deep-sky-blue;
+    h {
+        font-weight: bold;
+        padding-right: 5px;
+    }
+}

@@ -1,0 +1,317 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Trip Customization</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <script src="js/info.js"></script>
+    
+</head>
+
+<body onload="checkLogin()">
+    <div id="wrapper">
+	 
+            <%- include('./header'); %>
+        
+        <div id="divider"></div>
+        <form action="/adding" method="post">
+        <div class="container">
+            <div class="new-prof-info-head-c">
+                <h1><%=titrip.title  %></h1>
+                <div class="new-notch">
+                    <div class="cover-dp"></div>
+                    <div class="n-notch">
+                        <a class="cover-name">Ryan Shirley </a>
+                        <a class="cover-handle">@ryan.shirley</a>
+                    </div>
+                </div>
+            </div>
+            <div id="divider"></div>
+            <div class="prov-info-btn-c">
+                <div class="prov-info-btn-i1">
+                    <h>Duration </h><br>
+                    <%=titrip.days  %> Nights
+                </div>
+                <div class="prov-info-btn-i2">
+                    <h>Locations</h><br>
+                    Zakynthos, Metora and Athens
+                </div>
+                <div class="prov-info-btn-i3 prov-info-btn-sel">info</div>
+                <div class="prov-info-btn-i4">flights</div>
+                <div class="prov-info-btn-i5">itinerary</div>
+                <div class="prov-info-btn-i6">book</div>
+
+            </div>
+            <div id="divider"></div>
+            <div class="prov-info-lower">
+
+                <div class="prof-map">
+
+                    <div class="div2" style="border-radius:8px;overflow:hidden;width:500px;height:800px">
+                        <div id="map" style="height: 100% !important;
+                        width: 100% !important;">
+                        </div>
+                    </div>
+                </div>
+                <div class="prov-info-lower1">
+
+                    <div class="form-container">
+                        <div class="input-box">
+                            <p class="input-label">Enter Departure City</p>
+                            <!-- <input class="textI" name="Destination" value="Dubai,UAE" type="text"> -->
+                            <div class="aa-input-container" id="aa-input-container ">
+                                    <input class="textI" id="myInput" name="Destination"  type="text"
+                                    hidden>
+                                <input type="search" id="aa-search-input" class="aa-input-search textI" placeholder="Destination"
+                                     autocomplete="off" onchange="clicked()" />
+                                
+                            </div>
+                            
+                            <!-- Include AlgoliaSearch JS Client and autocomplete.js library -->
+                            <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+                            <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+                            <!-- Initialize autocomplete menu -->
+                            <script>
+                                var client = algoliasearch('U4A0FQ06MO', '685f378575aef70582205824c6437e00');
+                                console.log(client)
+                                var index = client.initIndex('airport_data');
+                                //initialize autocomplete on search input (ID selector must match)
+                                autocomplete('#aa-search-input',
+                                    { hint: false }, {
+                                        source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+                                        //value to be displayed in input control after user's suggestion selection
+                                        displayKey: 'code',
+                                        //hash of templates used when rendering dataset
+                                        templates: {
+                                            //'suggestion' templating function used to render a single suggestion
+                                            suggestion: function (suggestion) {
+                                                console.log(suggestion._highlightResult)
+
+                                                return '<div class="select-value-wrapper">' +'<div class="value-border"></div>'+'<div class="value">'+
+                                                    suggestion._highlightResult.city.value +  '     , ' +
+                                                    suggestion._highlightResult.country.value + '</div>'+'</div>';
+
+                                            }
+                                        }
+                                    });
+                                
+                                    function clicked() {
+                                        index.search(document.getElementById('aa-search-input').value, function (err, content) {
+                                            console.log("selected item is:")
+                                            console.log(content.hits);
+                                            content.hits.forEach((element) => {
+                                                if(element.code === document.getElementById('aa-search-input').value ){
+                                                    document.getElementById('myInput').value = element.code;
+                                                    console.log(element.city)
+                                                      PlotmMarker(element.city)
+                                                  
+                                                }
+                                            });
+                                           
+                                        });
+                                    }
+                                    
+                            </script>
+
+                        </div>
+
+                        <div class="twocol">
+                            <div class="input-box" >
+                                <p class="input-label">Enter Departure Date</p>
+                                <div class="sh-box  " style="    max-width: 232px;   ">
+                                    <input class="textI ddate" type="date" min="<%= moment(new Date()).format("YYYY-MM-DD") %>" name="ddate">
+                                    <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                        <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                        <desc>Created with sketchtool.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                            <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="input-box input-box2">
+                                <p class="input-label">Passengers</p>
+                                <div style="width: 104% !important" class="sh-box "onclick="pass('adult1','child1')" ondblclick="hide('adult1','child1')">
+                                    <div class="textI passengers"><span id="adc" name="bade">0</span> Adults <span id="chc" name="bacche">0</span> Child</div>
+                                    <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                        <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                        <desc>Created with sketchtool.</desc>
+                                        <defs></defs>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                            <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                            </g>
+                                        </g>
+                                    </svg>
+                             
+                                </div>
+                                <input type="text" hidden value="0" name="adultplus" id="testing">
+                <input type="text" hidden value="0" name="adultminus" id="testing1">
+                <input type="text" hidden value="0" name="childplus" id="testing2">
+                <input type="text" hidden value="0" name="childminus" id="testing3">
+                <div class="passenger-sub">
+				<div class="passenger-sel-wrapper" id="adult1">
+					<div class="passenger-sel-container">
+						<div class="tt">Adults</div>
+						<div class="sel-counter">
+                                <red onclick="subs('adc','adopc','testing1')" >-</red> 
+                                <span id="adopc">0</span>
+                                <plus onclick="add('adc','adopc','testing')">+</plus>
+						</div>
+					</div>
+				</div>
+				<div class="passenger-sel-wrapper" id="child1">
+					<div class="passenger-sel-container">
+						<div class="tt">Children</div>
+						<div class="sel-counter">
+                                <red onclick="subs('chc','ccopc','testing3')">-</red> 
+                                <span id="ccopc">0</span>
+                                <plus onclick="add('chc','ccopc','testing2')">+</plus>
+                            
+						</div>
+					</div>
+				</div></div>
+                            </div>
+
+                    </div>
+                        <div class="twocol">
+                        <div class="input-box passengers">
+                            <p class="input-label">Number of Rooms</p>
+                            <div class="sh-box ">
+                                <div class="textI passengers">3 Passengers 1 Room </div>
+                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                    <desc>Created with sketchtool.</desc>
+                                    <defs></defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+                        <div class="input-box input-box2 flight-class">
+                            <p class="input-label">Select Class</p>
+                            <div class="sh-box ">
+                                <div class="textI passengers">Economy</div>
+                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                    <desc>Created with sketchtool.</desc>
+                                    <defs></defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            </div>
+                        </div>
+</div>
+
+                    </div>
+                    <div id="divider"></div>
+                    <div class="new-prov-heading">we are customizing the trip based on your interests and preferences</div>
+                           <div class=" table-container">
+                    <div class="pref-box">
+                        <div class="bl-title">International Transfers</div>
+                        <ul class="pref-list">
+                            <li>Flights</li>
+                        </ul>
+                    </div>
+                               
+                    <div class="pref-box pref-box-r">
+                        <div class="bl-title">Local Transportation</div>
+                        <ul class="pref-list">
+                            <li>Google Maps</li>
+                        </ul>
+                    </div>
+                               <div class="pref-box  ">
+                        <div class="bl-title">Activities</div>
+                        <ul class="pref-list">
+                            <li>Family Holidays</li>
+                            <li>Adventure</li>
+                            <li>Hiking</li>
+                        </ul>
+                    </div>
+                               <div>
+                    <div class="pref-box pref-box-r">
+                        <div class="bl-title">Hotels</div>
+                        <ul class="pref-list">
+                            <li>Budget Hotels</li>
+                        </ul>
+                    </div>
+                    
+                     <div class="pref-box pref-box-r ">
+                        <div class="bl-title">Food</div>
+                        <ul class="pref-list">
+                            <li>Local Cuisine</li>
+                            <li>Indian</li>
+                            <li>Chinese</li>
+                        </ul>
+                    </div>
+                                   </div>
+                </div>
+                </div>
+            </div>
+
+
+
+
+        </div> 
+        <div class="footer-space"></div>
+        <div id="footer">
+            <div id="divider"></div>
+            <div class="footer-inner">
+                <div class="footer-text"><h> Next step</h>: Choose your Flights</div>
+            <button class="pref-submit" type="submit">Next Step</button>
+            </div>
+        </div>
+</form>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9fFYs8s3_zegXvVPCbk0OFyYynyX59cM&callback=initMap"></script>
+   <script src="js/info.js"></script>
+   <div class="mobile-notice">
+          
+        <script>
+if(navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)) {
+  document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+}
+</script>
+        
+          <div class="inner-mob">
+              <div class="mob-head">
+              <img src="img/logo.png">
+               <div class="mob-right"> Home</div>
+              </div>
+          <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+          <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+                  <div class="input-box ">
+                                  <p class="input-label">Email Address</p>
+                                  <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text"></div>
+              <div class="mob-submit">Subscribe</div>
+          </div>
+      
+      
+      </div>
+       
+</body>
+</html>

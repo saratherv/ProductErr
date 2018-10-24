@@ -1,0 +1,111 @@
+<%- include('./login'); %>
+    <%- include('./signup'); %>
+        <div class="Hcontainer">
+            <div id="header">
+                <a class="logo" href="/">
+                    <img src='img/logo.png' width='27px' height='27px'>
+                </a>
+                <div>
+                    <ul class="menu">
+                        <li class="menuitem selected-item">
+                            <a href="/">Home</a>
+
+
+
+                        </li>
+
+                        <li class="menuitem">
+                            <a href=”#”>Discover</a>
+                            <div class=" menu-drop menu-drop1">
+                                <div class="select-values-wrapper ">
+                                    <div class="menu1-image"></div>
+                                    <div class="select-values-container">
+
+                                        <div class="select-value-wrapper">
+                                            <div class="value-border"></div>
+                                            <div class="value">Trips by Season</div>
+                                        </div>
+                                        <div class="select-value-wrapper">
+                                            <div class="value-border"></div>
+                                            <div class="value">Go Lucky</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="menuitem H-menuitem " id="signbut">
+                            <a onclick="unhidesig()">Sign Up</a>
+
+
+                        </li>
+                        <li class="menuitem H-menuitem " id="logbut">
+                            <a onclick="unhide()">Log in</a>
+
+                        </li>
+                        <li class="menuitem H-menuitem " id="logout" style="display: none;">
+                            <a onclick="logout()">Log Out</a>
+                        </li>
+                        <li class=" inactive menuitem curr-menuitem">
+                            USD
+                            <img class="m-arrow" src="img/mar.svg">
+
+                        </li>
+                        <li class="menu-trip inactive">
+                            <div class="cart  menuitem ">
+                                <img src="img/cart.svg"> </div>
+                            <div class="cart-no menuitem  menu-trip">0</div>
+                            <div class="bell menuitem  menu-trip">
+                                <img src="img/bell.svg"> </div>
+                            <div class="bell-no menuitem  menu-trip">0</div>
+
+
+                        </li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+        <script>
+
+            function onload() {
+                console.log('onload called')
+                const cookies = document.cookie
+
+                console.log(cookies[1])
+
+                if (cookies.split('=')[0] === "cookieName") {
+                    console.log(cookies)
+                    var buttons = document.getElementsByClassName("menuitem H-menuitem")
+                    console.log(buttons[0])
+                    for (var i = 0; i < buttons.length - 1; i++) {
+                        console.log(buttons[i].style.display, buttons[i].id)
+                        // if(buttons[i].id=='logout')
+                        buttons[i].style.display = 'none';
+                    }
+                    // document.getElementById('logout').classList.add('visible');
+                    document.getElementById('logout').style.display = 'inline';
+                }
+
+            }
+
+            onload()
+
+            function logout() {
+                const cookies = document.cookie
+                console.log(cookies, "logout")
+                document.cookie = document.cookie.split('=')[0] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                var buttons = document.getElementsByClassName("menuitem H-menuitem")
+                console.log(buttons[0])
+                for (var i = 0; i < buttons.length; i++) {
+                    console.log(buttons[i].style.display)
+                    if (buttons[i].id != 'logout')
+                        buttons[i].style.display = "inline";
+                } 
+                document.getElementById('logout').style.display = 'none'
+            }
+
+
+        </script>

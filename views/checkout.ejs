@@ -1,0 +1,551 @@
+<!doctype html>
+<html>
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <title> Provide Information</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <script src="js/info.js"></script>
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+</head>
+
+<body>
+
+    <div class="mobile-notice">
+
+        <script>
+            if (navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)) {
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+            }
+        </script>
+
+        <div class="inner-mob">
+            <div class="mob-head">
+                <img src="img/logo.PNG">
+                <div class="mob-right"> Home</div>
+            </div>
+            <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+            <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the
+                mobile version goes live! Subscribe to stay on the loop</div>
+            <div class="input-box ">
+                <p class="input-label">Email Address</p>
+                <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text">
+            </div>
+            <div class="mob-submit">Subscribe</div>
+        </div>
+
+
+    </div>
+    <div id="wrapper">
+        <%- include('./header'); %>
+        <div class="new-prof-info-cover"></div>
+        <form action="/priceAndIssue" method="post">
+            <div class="container">
+                <div class="new-prof-info-head-c">
+                    <h1<%=tripdet.title %>
+                        </h1>
+                        <div class="new-notch">
+                            <div class="cover-dp"></div>
+                            <div class="n-notch">
+                                <a class="cover-name">Ryan Shirley </a>
+                                <a class="cover-handle">@ryan.shirley</a>
+                            </div>
+                        </div>
+                </div>
+                <div id="divider"></div>
+                <div class="prov-info-btn-c">
+                    <div class="prov-info-btn-i1">
+                        <h>Duration </h><br>
+                        <tripdet.days> Nights
+                    </div>
+                    <div class="prov-info-btn-i2">
+                        <h>Locations</h><br>
+                        Zakynthos, Metora and Athens
+                    </div>
+                    <div class="prov-info-btn-i3">info</div>
+                    <div class="prov-info-btn-i4">flights</div>
+                    <div class="prov-info-btn-i5">itinerary</div>
+                    <div class="prov-info-btn-i6  prov-info-btn-sel">book</div>
+
+                </div>
+                <div id="divider"></div>
+                <div class="new-flight-map">
+                    <iframe width="930" height="315" src="<%= tripdet.link %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+
+                <div class="prin-container new-traveler">
+                    <div id="divider"></div>
+                    <div class="prof-heading">
+                        <div class="prof-title">Informations and Checkout</div>
+                        <div class="prof-subtitle">Please fill out the particulars correctly as per records from the
+                            respective holders</div>
+                    </div>
+                    <div class="prof-table new-chk">
+                        <div class="pref-col1">
+                            <div class="pref-col1-inner">
+                                <div class="traveler-head">primary passenger<br>
+                                    <b>information</b></div>
+                            </div>
+                        </div>
+                        <div class="pref-col2">
+
+                        </div>
+                        <div class="pref-col3">
+                            <div class="prof-form prof-formtr">
+                                <div class="pref-twocol ">
+                                    <div class="fname">
+                                        <div class="input-box initaial">
+                                            <p class="input-label">First Name</p>
+                                            <div class="sh-box " onclick="unhidesalutation('iskohide')">
+                                                <div class="textI passengers" id="maintag">Mr</div>
+                                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                    <desc>Created with sketchtool.</desc>
+                                                    <defs></defs>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                                points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+
+                                            </div>
+                                            <input type="text" name="primarysalutation" value="Mr" hidden id="hidtag">
+                                            <div class="select-values-wrapper dropdown-input">
+                                                <div class="select-values-container " id="iskohide">
+
+                                                    <div class="select-value-wrapper" id="Mrs" onclick="changesalutation('Mrs','maintag','iskohide')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Mrs</div>
+                                                    </div>
+                                                   
+                                                    <div class="select-value-wrapper" id="Miss" onclick="changesalutation('Ms','maintag','iskohide')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Ms</div>
+                                                    </div>
+                                                   
+                                                    <div class="select-value-wrapper" id="Mr" onclick="changesalutation('Mr','maintag','iskohide')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Mr</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-box ">
+                                            <p class="input-label"> &nbsp;</p>
+                                            <input class="textI " name="primaryname" placeholder="Ryan" type="text"
+                                                required>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="input-box dob">
+                                        <p class="input-label">Date of Birth</p>
+                                        <div class="sh-box ">
+                                            <input class="textI ddate" type="date" value="1990-03-23" name="primarydob"
+                                                required>
+                                            <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                <desc>Created with sketchtool.</desc>
+                                                <defs></defs>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                    <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                        <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                            points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="pref-twocol ">
+                                    <div class="input-box Surname ph-no">
+                                        <p class="input-label">Surname</p>
+                                        <input class="textI " placeholder="Shirley" type="text" name="primarysurname"
+                                            required>
+                                    </div>
+                                    <div class="input-box ps-no ">
+                                        <p class="input-label">Passport Number</p>
+                                        <input class="textI " placeholder="A 12345" type="text" name="primarypno"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="pref-twocol">
+
+                                    <div class="fname">
+                                        <div class="input-box initaial ph-no ccode">
+                                            <p class="input-label" style="    width: max-content;   ">Phone Number</p>
+                                            <div class="sh-box " onclick="unhidecode('hidethis')">
+                                                <input value="+91" name="primarycode" class="textI  " id="thistag"></input>
+                                                
+                                            </div>
+                                            
+                                                                                 
+                                        </div>
+                                        <div class="input-box ">
+                                            <p class="input-label"> &nbsp;</p>
+                                            <input class="textI " name="primaryno" placeholder="8982413993" type="text"
+                                                required="">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="input-box em-box">
+                                        <p class="input-label">Email Address</p>
+                                        <input class="textI " placeholder="jtarunkrishna@gmail.com" type="email" name="primaryemail"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <p class="input-label">Complete Address</p>
+                                    <input class="textI " placeholder="193, Laguna Beach, California, USA" type="text"
+                                        name="primaryadd" required>
+                                </div>
+                                <div class="input-box nationality">
+                                    <p class="input-label">Nationality</p>
+                                    <div class="sh-box ">
+                                        <input type="search" style="    width: 100%;" id="aa-search-input" class="aa-input-search textI passengers nationality"
+                                            placeholder="Nationality" autocomplete="off" name="primarynation" onchange="clickedi('aa-search-input')"
+                                            required />
+                                        <script>algoliaSearch("aa-search-input", "Country")</script>
+
+                                        <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                            <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                            <desc>Created with sketchtool.</desc>
+                                            <defs></defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                    <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                        points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="pref-twocol">
+                                        <div class="input-box dob ph-no">
+                                            <p class="input-label">Passport Expiry Date</p>
+                                            <div class="sh-box ">
+                                                <input class="textI ddate" type="date" value="2020-03-23" name="primaryexp"
+                                                    required>
+                                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                    <desc>Created with sketchtool.</desc>
+                                                    <defs></defs>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                                points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+        
+                                            </div>
+                                        </div>
+                                        <div class="input-box ps-isuer">
+                                            <p class="input-label">Passport Issuing Country</p>
+                                            <div class="sh-box ">
+        
+                                                <input type="search" id="aa-search-inputt1" required class="aa-input-search1 textI passengers country"
+                                                    placeholder="Passport Issuing Country" name="primaryissuingcountry"
+                                                    autocomplete="off" onchange='clicked("aa-search-inputt1")'>
+                                                <script>
+                                                    algoliaSearch('aa-search-inputt1', 'Country')
+                                                </script>
+                                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                    <desc>Created with sketchtool.</desc>
+                                                    <defs></defs>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                                points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+
+
+                        </div>
+                    </div>
+                
+                <% for(var i=1;i<total;i++){ %>
+                    <div class="prof-table new-chk">
+                        <div class="pref-col1">
+                            <div class="pref-col1-inner">
+                                <div class="traveler-head"><%= convert.toOrdinal(i+1)  %> passenger<br>
+                                    <b>information</b></div>
+                            </div>
+                        </div>
+                        <div class="pref-col2">
+
+                        </div>
+                        <div class="pref-col3">
+                            <div class="prof-form prof-formtr">
+                                <div class="pref-twocol ">
+                                    <div class="fname">
+                                        <div class="input-box initaial">
+                                            <p class="input-label">First Name</p>
+                                            <div class="sh-box " onclick="unhidesalutation('iskohide<%= i %>')">
+                                                <div class="textI passengers" id="maintag<%= i %>">Mr</div>
+                                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                    <desc>Created with sketchtool.</desc>
+                                                    <defs></defs>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                                points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+
+                                            </div>
+                                            <input type="text" name="primarysalutation" value="Mr" hidden id="hidtag">
+                                            <div class="select-values-wrapper dropdown-input">
+                                                <div class="select-values-container " id="iskohide<%= i %>">
+
+                                                    <div class="select-value-wrapper" id="Mrs" onclick="changesalutation('Mrs','maintag<%= i %>','iskohide<%= i %>')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Mrs</div>
+                                                    </div>
+                                                    <div class="select-value-wrapper" id="Miss" onclick="changesalutation('Miss','maintag<%= i %>','iskohide<%= i %>')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Miss</div>
+                                                    </div>
+                                                    <div class="select-value-wrapper" id="Miss" onclick="changesalutation('Ms','maintag<%= i %>','iskohide<%= i %>')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Ms</div>
+                                                    </div>
+                                                    <div class="select-value-wrapper" id="Mstr" onclick="changesalutation('Mstr','maintag<%= i %>','iskohide<%= i %>')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Mstr</div>
+                                                    </div>
+                                                    <div class="select-value-wrapper" id="Mr" onclick="changesalutation('Mr','maintag<%= i %>','iskohide<%= i %>')">
+                                                        <div class="value-border"></div>
+                                                        <div class="value">Mr</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-box ">
+                                            <p class="input-label"> &nbsp;</p>
+                                            <input class="textI " name="primaryname" placeholder="Ryan" type="text"
+                                                required>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="input-box dob">
+                                        <p class="input-label">Date of Birth</p>
+                                        <div class="sh-box ">
+                                            <input class="textI ddate" type="date" value="1990-03-23" name="primarydob"
+                                                required>
+                                            <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                <desc>Created with sketchtool.</desc>
+                                                <defs></defs>
+                                                <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                    <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                        <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                            points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="pref-twocol ">
+                                    <div class="input-box Surname ph-no">
+                                        <p class="input-label">Surname</p>
+                                        <input class="textI " placeholder="Shirley" type="text" name="primarysurname"
+                                            required>
+                                    </div>
+                                    <div class="input-box ps-no ">
+                                        <p class="input-label">Passport Number</p>
+                                        <input class="textI " placeholder="A 12345" type="text" name="primarypno"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="pref-twocol">
+
+                                    <div class="fname">
+                                        <div class="input-box initaial ph-no ccode">
+                                            <p class="input-label" style="    width: max-content;   ">Phone Number</p>
+                                            <div class="sh-box " onclick="unhidecode('hidethis')">
+                                                <input value="+91" name="primarycode" class="textI  " id="thistag"></input>
+                                                
+                                            </div>
+                                            
+                                                                                 
+                                        </div>
+                                        <div class="input-box ">
+                                            <p class="input-label"> &nbsp;</p>
+                                            <input class="textI " name="primaryno" placeholder="8982413993" type="text"
+                                                required="">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="input-box em-box">
+                                        <p class="input-label">Email Address</p>
+                                        <input class="textI " placeholder="jtarunkrishna@gmail.com" type="email" name="primaryemail"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <p class="input-label">Complete Address</p>
+                                    <input class="textI " placeholder="193, Laguna Beach, California, USA" type="text"
+                                        name="primaryadd" required>
+                                </div>
+                                <div class="input-box nationality">
+                                    <p class="input-label">Nationality</p>
+                                    <div class="sh-box ">
+                                        <input type="search" style="    width: 100%;" id="aa-search-input<%= i %>" class="aa-input-search textI passengers nationality"
+                                            placeholder="Nationality" autocomplete="off" name="primarynation" onchange="clickedi('aa-search-input<%= i %>')"
+                                            required />
+                                        <script>algoliaSearch("aa-search-input<%= i %>", "Country")</script>
+
+                                        <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                            <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                            <desc>Created with sketchtool.</desc>
+                                            <defs></defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                    <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                        points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="pref-twocol">
+                                        <div class="input-box dob ph-no">
+                                            <p class="input-label">Passport Expiry Date</p>
+                                            <div class="sh-box ">
+                                                <input class="textI ddate" type="date" value="2020-03-23" name="primaryexp"
+                                                    required>
+                                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                    <desc>Created with sketchtool.</desc>
+                                                    <defs></defs>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                                points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+        
+                                            </div>
+                                        </div>
+                                        <div class="input-box ps-isuer">
+                                            <p class="input-label">Passport Issuing Country</p>
+                                            <div class="sh-box ">
+        
+                                                <input type="search" id="aa-search-input1<%= i %>" required class="aa-input-search1 textI passengers country"
+                                                    placeholder="Passport Issuing Country" name="primaryissuingcountry"
+                                                    autocomplete="off" onchange='clicked("aa-search-input1<%= i %>")'>
+                                                <script>
+                                                    algoliaSearch('aa-search-input1<%= i %>', 'Country')
+                                                </script>
+                                                <svg class="drpar" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                                    <desc>Created with sketchtool.</desc>
+                                                    <defs></defs>
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) "
+                                                                points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            
+
+
+                        </div>
+                </div>
+
+                
+                
+                <% } %>
+                    </div>
+            </div>
+
+    </div>
+
+    <div class="footer-space"></div>
+    <div id="footer">
+        <div id="divider"></div>
+        <div class="footer-inner">
+            <div class="footer-text">You Pay <h>USD
+                    <%=price  %>
+
+                </h>
+            </div>
+            <button class="pref-submit" type="submit">Checkout and Pay</button>
+            <div class="cart-footer">
+                <div class="cart menuitem "><img src="img/cart.svg"> </div>
+                <div class="cart-no menuitem  menu-trip">0</div>
+                <div class="bell menuitem  menu-trip"><img src="img/bell.svg"> </div>
+                <div class="bell-no menuitem  menu-trip">0</div>
+            </div>
+
+        </div>
+    </div>
+    </form>
+</body>
+
+</html>

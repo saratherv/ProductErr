@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+
+
+
+    <meta charset="utf-8">
+    <title> Provide Information</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+</head>
+
+<body>
+    <div class="mobile-notice">
+
+        <script>
+            if(navigator.userAgent.match(/Android/i)
+  || navigator.userAgent.match(/webOS/i)
+  || navigator.userAgent.match(/iPhone/i)
+  || navigator.userAgent.match(/iPad/i)
+  || navigator.userAgent.match(/iPod/i)
+  || navigator.userAgent.match(/BlackBerry/i)
+  || navigator.userAgent.match(/Windows Phone/i)) {
+    document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+}
+</script>
+
+        <div class="inner-mob">
+            <div class="mob-head">
+                <img src="img/logo.PNG">
+                <div class="mob-right"> Home</div>
+            </div>
+            <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+            <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+            <div class="input-box ">
+                <p class="input-label">Email Address</p>
+                <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text">
+            </div>
+            <div class="mob-submit">Subscribe</div>
+        </div>
+
+
+    </div>
+    <div id="wrapper">
+            <%- include('./header'); %>
+        <div class="new-prof-info-cover">
+        <img  src="img/beach-cover.png">
+        </div>
+        <div class="container">
+            <div class="new-prof-info-head-c">
+                <h1><%=trip.title  %></h1>
+                <div class="new-notch">
+                    <div class="cover-dp"></div>
+                    <div class="n-notch">
+                        <a class="cover-name">Ryan Shirley </a>
+                        <a class="cover-handle">@ryan.shirley</a>
+                    </div>
+                </div>
+            </div>
+            <div id="divider"></div>
+            <div class="prov-info-btn-c">
+                <div class="prov-info-btn-i1">
+                    <h>Duration </h><br>
+                    <%=trip.days  %> Nights
+                </div>
+                <div class="prov-info-btn-i2">
+                    <h>Locations</h><br>
+                    Zakynthos, Metora and Athens
+                </div>
+                <div class="prov-info-btn-i3">info</div>
+                <div class="prov-info-btn-i4">flights</div>
+                <div class="prov-info-btn-i5">itinerary</div>
+                <div class="prov-info-btn-i6">book</div>
+
+            </div>
+            <div id="divider"></div>
+        <div class="bookin-cnf-cn">
+            <img src="img/qr-code.png">
+            <div class="bookin-cnf-center">
+            <div class="bookin-cnf-center-head">
+                congratulations! your booking for <bl>flights</bl> is confirmed
+                </div>
+                <div class="bookin-cnf-center-table">
+                <div class="bookin-cnf-center-table-head">
+                    <div class="col1">trift flights booking number</div>
+                    <div class="col2">PNR number</div>
+                    <div class="col3">status</div>
+                    </div>
+                 
+                     <div class="bookin-cnf-center-table-values">
+                    <div class="col1">OCT14/DXB/CDG/TW/313940</div>
+                    <div class="col2"><%= itires.Airline[0].AirlinePnr %> </div>
+                    <div class="col3">success </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bookin-cnf-right">
+                   <div class="bookin-cnf-btn bookin-cnf-btn-teal">Print Flights</div>
+            </div>
+            </div>
+            
+            <div class="new-flight-map">
+                <iframe width="930" height="315" src="<%= trip.link %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div> 
+            
+            <div class="flight-booking-days-head flight-booking-days-head-m">manage flight bookingss   </div>
+           
+            <div id="divider"></div>
+            <div class="fl-hide">
+            <div class="flight-up">
+                <div class="flight-up-inner">
+                    <div class="fl-logo-tl">
+                        <div><img src="img/flight.svg"></div>
+
+                        <div class="new-fl-timeline">
+                            <div class="new-fl-tl-time-cn">
+                              <%= moment(itires.Item[0].DepartureTime).format('HH:mm'); %>
+
+                                <br>
+                                <h><%= itires.Item[0].Origin %></h>
+                            </div>
+                            <div class="new-fl-time new-fl-time-full">
+                                <% var quotient = Math.floor(itires.Item[0].Duration/60); %>
+                                <% var remainder = itires.Item[0].Duration % 60; %> 
+                            <div class="new-time-del "><%=quotient  %> hrs <%=remainder %> m</div>
+                            <div class="tl-line"></div>
+                        </div>
+                            <div class="new-fl-tl-time-cn">
+                                <%= moment(itires.Item[0].ArrivalTime).format('HH:mm'); %>
+
+                                <br>
+                                <h><%= itires.Item[0].Origin %></h>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="divider"></div>
+                    <div class="fl-name-action">
+                        <div class="fl-name-info">
+                            <div class="new-fl-name">Multiple Airlines</div>
+                          <!--  <div class="new-fl-close">
+                                Show more Information
+                                <svg class="close " viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch 
+                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                    <desc>Created with sketchtool.</desc>
+                                    <defs></defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                        </g>
+                                    </g>
+                                </svg></div>-->
+                        </div>
+                        <div class="fl-btn-price">
+                            <div class="fl-price">
+                                <div class="currn"><%= itires.Currency %> </div>
+                                <div class="tot"><%= itires.TotalFare %></div>
+                            </div>
+                            <div class="new-fl-box-submit new-fl-box-submit-red">Cancel Booking</div>
+                        </div>
+                    </div>
+                </div>
+    </div></div>
+            <div class="footer-space"></div>
+        </div></div></body></html>

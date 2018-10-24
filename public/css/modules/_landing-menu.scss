@@ -1,0 +1,257 @@
+@import "dropdown";
+@import "pref-list.scss";
+@import "signup.scss";
+.menu {
+    margin-right: 17px;
+    margin-bottom: 0px;
+    float: right;
+    margin-top: 37px;
+    a:hover {
+        border-bottom: 4px solid $deep-sky-blue;
+    }
+    ul {
+        text-decoration: none;
+    }
+    .menuitem {
+
+
+
+        vertical-align: baseline;
+        position: relative;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 30px;
+        font-family: $fm;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        &:hover .menu-drop,
+        .menu-drop:hover {
+            display: block !important;
+        }
+
+    }
+    a {
+        color: $deep-sky-blue;
+        text-decoration: none;
+        padding-bottom: 28px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+    }
+    li {
+        display: inline-block;
+    }
+
+    text-align: right;
+    img {
+        vertical-align: middle;
+    }
+    .m-arrow {
+        width: 5px;
+        height: 5px;
+        padding-left: 5px;
+        width: 7px;
+        fill: white;
+        margin-left: 12px;
+        height: 9px;
+        margin-top: -4px;
+        padding: 1px 1px 1px 1px;
+    }
+    .menu-drop {
+        padding-top: 25px;
+        height: fit-content;
+        a {
+            color: #4f4f4f;
+            padding: 0;
+            border: none;
+        }
+    }
+}
+
+.logo {
+    margin-left: 18px;
+    float: left;
+ margin-top: 43px;
+    img {
+    width: 73px;
+  height: 17px;
+    }
+}
+
+#header {
+
+
+    display: flow-root;
+    width: 100%;
+    vertical-align: middle;
+}
+
+
+.Hcontainer {
+    width: 946px;
+    margin: auto;
+}
+
+.selected-item {
+    a {
+        border-bottom: 4px solid $deep-sky-blue;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.currency {
+    -webkit-appearance: none;
+    font-family: $fm;
+    font-size: 14.4px;
+    font-weight: 500;
+    width: 50px;
+    font-style: normal;
+    color: #2789f0;
+    border: none;
+    cursor: default;
+
+}
+
+#currency {
+    float: left;
+}
+
+#drp {
+    float: right
+}
+
+.asdfsf::after {
+    @include dropdown;
+    right: 12px;
+}
+
+.asdfsf {
+    padding-right: 0px;
+}
+
+.menu-seprator {
+    width: 3px !important;
+    height: 32px !important;
+    border-radius: 2px;
+    background-color: $white-two;
+
+}
+
+
+
+.sep {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.cart-no {
+
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    color: $tealish;
+
+}
+
+.bell-no {
+
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    color: $pinkish;
+}
+
+.curr-menuitem {
+    background-color: $deep-sky-blue;
+    border-radius: 8px;
+    padding: 11px 4px 7px 13px !important;
+    font-family: $fb;
+    color: white;
+    cursor: default;
+    margin: 0 12px;
+}
+
+.menu-drop {
+    position: absolute;
+    z-index: 5;
+    width: max-content;
+    top: 65%;
+
+}
+
+.menu1-image {
+    margin: 11px 11px 0 11px;
+    width: 226px;
+    height: 120px;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: $white-four;
+}
+
+.menu-drop {
+    display: none;
+}
+
+.menu-drop1 {
+    right: -82%;
+}
+
+.menu-drop2 {
+    right: -58%;
+}
+
+.menu-drop3 {
+    right: -10%;
+
+}
+
+.menu-logout {
+    @include sm-btn;
+    width: 121px;
+    padding: 10px 1px 7px 1px;
+
+    margin: 12px auto;
+}
+
+
+
+.menu-trip {
+    .cart-no,
+    .bell-no {
+        padding-top: 11px;
+        cursor: default;
+    }
+    .cart,
+    .bell {
+        padding-top: 7px;
+    }
+    display: flex !important;
+    float: right;
+    position: relative;
+    &:hover .menu-drop {
+        display: block !important;
+    }
+}
+
+.cart-drop {
+    padding: 17px 15px 17px 13px;
+    background-color: $deep-sky-blue;
+    @include sh-box;
+    font-family: Objectivity;
+    font-size: 12.8px;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+
+.cart-drop-notch {
+    border-radius: 5px;
+    left: 39%;
+    top: 1.6%;
+    position: relative;
+    height: 18px;
+    width: 32px;
+    background-color: $deep-sky-blue;
+}

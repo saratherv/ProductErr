@@ -1,0 +1,91 @@
+@import "modules/super.scss";
+@import "modules/landing-menu.scss";
+@import "modules/forms.scss";
+@import "modules/common.scss";
+@import "dropdown.scss";
+.criter-title {
+	font-family: $fb;
+	font-size: 25.4px;
+	margin-top: 44px;
+	margin-bottom: 22px;
+	
+}
+
+.criter-form-1row {
+	display: flex;
+
+	
+}
+
+.iter-title {
+	width: 698px;
+
+}
+
+.criter-form {
+	margin-top: 31px;
+	p , div,input{ color: $greyish-brown !important;}
+}
+
+.iter-nights {
+	@extend .passengers;
+	width: fit-content;
+	margin-left: auto;
+	.sh-box{
+		width: 209px;
+	}
+}
+
+.criter-form-2row {
+    @extend .criter-form-1row;
+    .input-label{
+            margin-top: 10px;
+    }
+    .textI{
+        margin-top: 0px;
+    }
+}
+
+.criter-u-title {
+    width: 209px;
+}
+
+.criter-upload {
+    @include sh-box;
+    width: 209px;
+    height: 40px;
+    .upload-txt{margin: auto 17px;
+        font-family: $fm;
+            margin-top: 15px;
+        font-size: 12.8px;
+        float: left;
+        color: $greyish-brown;
+    }
+    cursor: pointer;
+}
+
+.criter-upload-i {
+    float:right;
+    margin: auto 10px;
+        margin-top: 12px;
+}
+
+.criter-or-title {
+    width: fit-content;
+    margin: 17px 18px !important;
+}
+
+.criter-url {
+    width: 457px;
+}
+
+.criter-cover-preview {
+    width: 946px;
+  height: 315px;
+  border-radius: 8px;
+  background-color: $white-two;
+}
+
+
+
+

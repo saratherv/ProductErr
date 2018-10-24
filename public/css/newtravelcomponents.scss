@@ -1,0 +1,380 @@
+@import "modules/super.scss";
+@import "modules/notch.scss";
+@import "modules/common.scss";
+@import "modules/forms.scss";
+@import "modules/trcomponents.scss";
+.new-tr-container {
+    
+    margin-top: 30px;
+    @include sh-box;
+     width: 929px;
+  height: 386px;
+    background-color: white;
+}
+.new-trip-container {
+    margin-top: 30px;
+    @include sh-box;
+     width: 929px;
+  height: 415px;
+    background-color: white;
+}
+
+.new-tr-container-inner {
+    display: flex;
+    padding: 28px 36px 23px 35px;
+}
+
+.new-tr-col1 {
+    width: 170px;
+    margin-right: 57px;
+}
+
+.new-tr-col2 {
+       width: 280px;
+    margin-right: 39px;
+}
+
+.new-tr-icon {
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.new-tr-ht-heading {
+      font-family: $fm;
+  font-size: 17.6px;
+  font-weight: bold;
+  line-height: 1.14;
+  color: #333333;
+    margin-bottom: 9px;
+}
+
+.new-tr-ht-sub {
+    font-family: $fm;
+  font-size: 12.8px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #4f4f4f;
+}
+
+.new-ht-star-cn {
+    margin-top:29px;
+}
+
+.new-tr-col2-inner {
+    margin-top: 66px;
+}
+
+.new-tr-trip-adv {
+    margin-top: 42px;
+}
+
+.new-tr-trip-adv-inner {
+    margin-top: 11px;
+    display: flex;
+}
+
+.new-rating {
+    
+    .outer{
+        margin: 0;}
+}
+
+.new-tr-container-inner-b {
+    padding: 0 36px 31px 35px;
+}
+
+.new-tr-bottom-flex {
+    display: flex;
+    margin-top: 23px;
+}
+
+.new-tr-bottom-n-container {
+    
+    margin-top: 16px;
+    font-family: $fm;
+  font-size: 12.8px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4f4f4f;
+    h{
+        font-weight: bold;
+        color: $deep-sky-blue;
+        margin-right: 30px;
+    }
+}
+
+.new-tr-bottom-price-container {
+    margin-left: auto;
+    margin-top: 16px;
+}
+
+.new-tr-ht-book {
+    margin-left: 25px;
+      @include sm-btn;
+    width: 179px;
+    padding: 18px 1px 17px 1px;
+}
+
+.new-ht-remind {
+    margin-left: auto;
+}
+
+.new-tr-trip-icon {
+    
+}
+
+.new-tr-trip-col1 {
+     width: 170px;
+    margin-right: 24px;
+}
+
+.new-tr-trip-col2 {
+    width: 170px;
+    margin-right: 95px;
+}
+
+.new-tr-trip-heading {
+    margin-top: 35px;
+    margin-bottom:20px;
+    .new-tr-ht-heading{    color: #05c5a4 !important;} 
+}
+
+.mini-dashed {
+    margin-top: 39px;
+     width: 50px;
+  height: 8px;
+  border-radius: 3.5px;
+  background-color: #05c5a4;
+}
+
+.new-tr-trip-col2-inner {
+    margin-top: 83px;
+}
+
+.new-trip-map {
+    width: 397px;
+  height: 263px;
+  border-radius: 6.4px;
+    overflow: hidden;
+    background-color: grey;
+}
+
+.new-tr-img-inner {
+    margin: 30px 35px 29px 33px;
+    display: flex;
+}
+
+.new-tr-img-col1 {
+     width: 618px;
+    margin-right: 35px;
+    .hotel-carousal{
+          width: 618px;
+  height: 327px;
+        .hotel-image{
+            object-fit: cover;
+             width: 618px;
+  height: 327px;
+        }
+        .larrow , .rarrow{
+                top: 39%;
+    padding: 29px 152px;
+        }
+        .larrow{
+            left: -20%;
+            
+        }
+        
+        .rarrow{
+            right: -20%;
+            
+        }
+    }
+}
+
+.new-tr-img-col2 {
+    margin-top: 105px;
+}
+
+.new-tr-img-head {
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-family: $fm;
+  font-size: 17.6px;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #333333;
+}
+
+.new-tr-img-sub {
+    font-family: $fm;
+  font-size: 12.8px;
+        letter-spacing: 0.1px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: justify;
+  color: #4f4f4f;
+}
+
+
+
+.new-tr-img-date {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.new-tr-act-container {
+    margin-top: 30px;
+     @include sh-box;
+     width: 929px;
+  height: 355px;
+    background-color: white;
+    
+}
+
+.new-tr-act-inner {
+    padding: 38px 46px 38px 35px;
+    display: flex;
+}
+
+.new-tr-act-col1 {
+    width: 461px;
+
+    
+}
+
+.new-tr-act-col2 {
+    width: 387px;
+}
+
+.new-tr-act-img {
+    overflow: hidden;
+      width: 387px;
+  height: 178px;
+  border-radius: 6.4px;
+  background-color: #e7e7e7;
+
+}
+
+.new-tr-act-icon {
+    margin-bottom: 19px;
+}
+
+.new-tr-act-head {
+    margin-bottom: 34px;
+     width: 230px;
+  height: 40px;
+  font-family: $fm;
+  font-size: 17.6px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #333333;
+}
+
+.new-tr-act-feats {
+    display: flex;
+    .feats{
+        width: 137px;
+    }
+}
+
+.feats-name {
+    font-family: $fm;
+  font-size: 12.8px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  color: #05c5a4;
+}
+
+.feats-data {
+    margin-top: 8px;
+    font-family: $fm;
+  font-size: 14.8px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.08;
+  letter-spacing: normal;
+  color: #4f4f4f;
+}
+
+.new-tr-act-info-cn {
+    margin-top: 30px;
+     @include sh-box;
+    margin:31px  auto 0 auto;
+      width: 910px;
+  height: fit-content;
+    background-color: white;
+}
+
+.new-tr-act-info-inner {
+    padding: 27px 37px 35px 38px;
+    display: flex;
+    
+}
+
+.new-tr-act-info-col1 {
+    width:566px;
+}
+
+.new-tr-act-info-col2 {
+    width: 269px;
+}
+
+.new-tr-act-info-head {
+     font-family: $fm;
+  font-size: 14.8px;
+  font-weight: bold;
+  line-height: 1.08;
+  color: #2789f0;
+    margin-bottom: 13px;
+}
+
+.new-tr-act-info-sub {
+    width: 525px;
+  font-family: $fm;
+  font-size: 12.8px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.1px;
+  text-align: justify;
+  color: $greyish-brown;
+}
+
+.new-tr-act-info-sub2 {
+    width: 269px;
+    line-height: 1.4;
+    bul{
+           margin-right: 13px;
+        
+        
+    }
+}
+
+.trlogo {
+    height: 20px;
+    width: auto;
+    margin-right: 4px;
+}
+
+.new-tr-ht-star-cn {
+    margin-top: 10px;
+    display: flex;
+    img{
+          width: 18px;
+  height: 17px;
+        margin-right: 4px;
+  object-fit: contain;
+    }
+}

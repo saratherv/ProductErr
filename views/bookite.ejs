@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Itineary Booking</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <script src="js/info.js"></script>
+    <script>
+    
+    function reminderchg(){
+        var ele=document.getElementById('remcg');
+        ele.classList.add('rem-added');
+        ele.innerHTML='Reminder Added';
+
+    }
+    
+
+</script>
+</head>
+
+<body>
+       
+    <div id="wrapper">
+        <%- include('./header'); %>
+        <div id="divider"></div>
+        <div class="container">
+            <div class="new-prof-info-head-c">
+                <h1><%=trip.title  %></h1>
+                <div class="new-notch">
+                    <div class="cover-dp"></div>
+                    <div class="n-notch">
+                        <a class="cover-name">Ryan Shirley </a>
+                        <a class="cover-handle">@ryan.shirley</a>
+                    </div>
+                </div>
+            </div>
+            <div id="divider"></div>
+            <div class="prov-info-btn-c">
+                <div class="prov-info-btn-i1">
+                    <h>Duration </h><br>
+                    <%=trip.days %> Nights
+                </div>
+                <div class="prov-info-btn-i2">
+                    <h>Locations</h><br>
+                    Zakynthos, Metora and Athens
+                </div>
+                <div class="prov-info-btn-i3">info</div>
+                <div class="prov-info-btn-i4">flights</div>
+                <div class="prov-info-btn-i5  prov-info-btn-sel">itinerary</div>
+                <div class="prov-info-btn-i6">book</div>
+
+            </div>
+            <div id="divider"></div>
+            <div class="new-flight-map">
+                <iframe width="930" height="315" src="<%= trip.link %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="flight-booking-days-head">select Activities, Local Transport and Hotels</div>
+            <div class="flight-booking-days-wrapper">
+                <div class="flight-booking-days-arrow">
+                    <svg viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                        <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                        <desc>Created with sketchtool.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                            <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+               <% x=(a+1) %>
+                <% for(var i=0;i<trip.days;i++){  %>
+                        <% var startdate=start %>
+                        <% var new_date = moment(startdate, "YYYY-MM-DD"); %>
+                        <% var thing = new_date.add((i+1), 'days'); %>
+                        
+                    <% if((i+1)==a){ %>
+                <a href="/exbook?par=<%=(i+1) %>"><div class="flight-booking-day flight-booking-day-sel ">
+                    <div class="flight-booking-day-inner">
+                        <b>Day <%=(i+1) %></b><br>
+                        <h>
+                                <%= moment(thing).format('dddd') %></h>
+                    </div>
+                </div></a>
+                <% }else{ %>
+               <a href="/exbook?par=<%=(i+1) %>"> <div class="flight-booking-day ">
+                    <div class="flight-booking-day-inner">
+                        <b>Day <%= (i+1) %></b><br>
+                        <h>
+                                <%= moment(thing).format('dddd') %></h>
+                    </div>
+                </div></a>
+                <% } %>
+                <% } %>
+                <div class="flight-booking-days-arrow flight-booking-days-arrow-r">
+                    <svg viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+                        <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                        <desc>Created with sketchtool.</desc>
+                        <defs></defs>
+                        <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                            <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div id="divider"></div>
+
+            <div class="booking-time-container">
+                <div class="time-of-day">Morning</div>
+                <div class="date-day"><%= moment(dat).format('DD MMMM YYYY') %><h> <%= moment(dat).format('dddd') %></h>
+                </div>
+            </div>
+
+        <!--    <div class="flight-up">
+                <div class="flight-up-inner">
+                    <div class="fl-logo-tl">
+                        <div><img src="img/flight.svg"></div>
+
+                        <div class="new-fl-timeline">
+                            <div class="new-fl-tl-time-cn">
+                                03:05
+
+                                <br>
+                                <h>DXB</h>
+                            </div>
+                            <div class="new-fl-time new-fl-time-half">
+                                <div class="new-time-del ">5h 20m</div>
+                                <div class="tl-line"></div>
+                            </div>
+                            <div class="new-fl-tl-time-cn">
+                                08:40
+
+                                <br>
+                                <h> COK</h>
+                                <div class="new-fl-red"></div>
+                                <div class="new-fl-layover-time">3h 30m<br><b>
+                                        layover</b></div>
+                            </div>
+                            <div class="new-fl-time new-fl-time-half">
+                                <div class="new-time-del ">2h 00m</div>
+                                <div class="tl-line"></div>
+                            </div>
+                            <div class="new-fl-tl-time-cn">
+                                14:20
+
+                                <br>
+                                <h>BOM</h>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="divider"></div>
+                    <div class="fl-name-action">
+                        <div class="fl-name-info">
+                            <div class="new-fl-name">Multiple Airlines</div>
+                            <div class="new-fl-close">
+                                Show more Information
+                                <svg class="close " viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                     Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch 
+                                    <title>674B890E-CFF7-4A73-A6B8-46E1D74714F0</title>
+                                    <desc>Created with sketchtool.</desc>
+                                    <defs></defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+                                        <g id="Assets" transform="translate(-964.000000, -205.000000)">
+                                            <polygon id="Shape-Copy-7" transform="translate(971.600000, 209.900000) rotate(-270.000000) translate(-971.600000, -209.900000) " points="968.521507 202.3 966.8 204.092345 972.817432 209.903883 966.8 215.707667 968.521507 217.5 975.469469 210.796189 976.4 209.903883 975.469469 209.003836"></polygon>
+                                        </g>
+                                    </g>
+                                </svg></div>
+                        </div>
+                        <div class="fl-btn-price">
+                            <div class="fl-price">
+                                <div class="currn">AED </div>
+                                <div class="tot">490</div>
+                            </div>
+                            <div class="new-fl-box-submit added">Added to cart</div>
+                        </div>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="travel-box">
+                <div class="flight-box">
+                    <div class="inner-box">
+                        <div class="uppper-table">
+                            <div class="inner1">
+                                <div>
+                                    <img class="landbar-notch" src="img/car.svg">
+
+                                </div>
+                                <div class="h-name-container">
+                                    <div class="hleft-border">&nbsp; </div>
+                                    <div class="klasdf">
+                                        <div class="ht-name">The Rove Hotel, Downtown, Dubai, UAE</div>
+                                        <div class="to-place">The Youth Hub, Emirates Towers, Dubai, UAE</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+                            <div class="inner2"></div>
+                            <div class="inner3">
+                                <div class="input-box">
+                                    <div class="input-label">Select Mode of Transport</div>
+                                    <div class="dropdown">
+                                        <select name="mode-transport">
+                                            <option selected>Car</option>
+                                            <option>MotorCycle</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="hotel-day-time">
+                                    <div class="flight-day">25th September
+                                    </div>
+                                    <div class="flight-time">
+                                        Afternoon
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="divider"></div>
+                        <div class="box-bottom">
+                            <div class="box-priceline">Estimated Prices based on Google Algorithm</div>
+
+                            <div class="box-price">
+                                <div class="currn">AED </div>
+                                <div class="tot">35</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-box-container">
+                    <div class="action-box">
+                        <div class="inner-box">
+                            <div class="hotel-carousal">
+
+                                <img class="hotel-image" src="img/rem-map.PNG">
+
+                            </div>
+                            <div class="fl-box-submit">Set Reminder
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <div class="booking-time-container">
+            <div class="time-of-day">Afternoon</div>
+                <div class="date-day"><%= moment(dat).format('DD MMMM YYYY') %><h>		<%= moment(dat).format('dddd') %></h></div>
+            </div>
+            
+        <div class="travel-box">
+            <div class="flight-box">
+                <div class="inner-box">
+                    <div class="uppper-table">
+                        <div class="inner1">
+                            <div>
+                                <img class="landbar-notch" src="img/bed.svg">
+
+                            </div>
+                            <div class="h-name-container">
+                                <div class="hleft-border"> </div>
+                                <div class="ht-name">The Rove Hotel, Downtown, Dubai, UAE</div>
+                            </div>
+                            <div class="hotel-day-time">
+                                <div class="flight-day">25th September
+                                </div>
+                                <div class="flight-time">
+                                    15:30
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="inner2"></div>
+                        <div class="inner3">
+                            <div class="input-box">
+                                <div class="input-label">Select Room Type</div>
+                                <div class="dropdown">
+                                    <select name="room-type">
+                            <option selected>Standard Twin Bed</option>
+                                <option>Queen Bed</option>
+                            </select>
+                                </div>
+                            </div>
+
+                            <div id="divider"></div>
+                            <div class="hotel-amenities">
+                                <div class="ht-type ">
+                                    <div class="ht-label">
+                                        Type</div>
+                                    <div class="ht-disc">Room Only</div>
+                                </div>
+                                <div class="ht-wifi">
+                                    <div class="ht-label">
+                                        Wifi</div>
+                                    <div class="ht-disc">Enabled</div>
+                                </div>
+                                <div class="ht-cancl">
+                                    <div class="ht-label">
+                                        Cancellation</div>
+                                    <div class="ht-disc">With Fee</div>
+                                </div>
+                            </div>
+                            <div id="divider"></div>
+                            <div class="rating-container">
+                                <div class="rating star4">
+                                    
+CHANGE CLASSNAME FOR NO OF STARS ,EG. star2 will show 2 black circle.
+
+                                    <div id="s1" class="outer circle shapeborder">
+                                        <div class="inner circle  ">&nbsp;</div>
+                                    </div>
+                                    <div id="s2" class="outer circle shapeborder">
+                                        <div class="inner circle ">&nbsp;</div>
+                                    </div>
+                                    <div id="s3" class="outer circle shapeborder">
+                                        <div class="inner circle ">&nbsp;</div>
+                                    </div>
+                                    <div id="s4" class="outer circle shapeborder">
+                                        <div class="inner circle ">&nbsp;</div>
+                                    </div>
+                                    <div id="s5" class="outer circle shapeborder">
+                                        <div class="inner circle ">&nbsp;</div>
+                                    </div>
+
+                                </div>
+                                <div class="votes">32.6K
+                                    <sm>Votes</sm>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="divider"></div>
+                    <div class="box-bottom">
+                        <div class="box-priceline">Price Inclusive of Airport Taxes and Surcharges</div>
+
+                        <div class="box-price">
+                            <div class="currn">AED </div>
+                            <div class="tot">490</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="action-box-container">
+                <div class="action-box">
+                    <div class="inner-box">
+                        <div class="hotel-carousal">
+
+                            <img class="hotel-image" src="img/hotel.png">
+                            <img class="larrow" src="img/arrow.svg">
+                            <img class="rarrow" src="img/arrowd.svg">
+                        </div>
+                        <div class="fl-box-submit">Select This Hotel
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="footer-space"></div>
+    	<div id="footer">
+		<div id="divider"></div>
+        <div class="footer-inner">
+            <div class="footer-text"><h> Next Step</h>:Checkout and Book Trip</div>
+              <a href="/exbook?par=<%=(a+1)  %>">	<button class="pref-submit">Choose Itinerary for Next Day</button></a>
+        <a href="/checkout" ><button class="pref-submit pref-submit-green" id = "next">Next Section</button></a>
+       
+          
+        </div>
+	</div>
+    <script>
+       var a = document.getElementById('a').value
+            console.log('chala' + a)
+            const images = document.getElementsByClassName('fl-day');
+            const img=document.getElementsByClassName('it-day-icon');
+            for(var i=0;i<images.length;i++){
+                if(i==a-1){
+                images[i].classList.add('fl-day-sel');
+                img[i].src='./img/globe.svg';
+            }
+                else{
+                 images[i].classList.add('fl-day-bl')
+                 img[i].src='./img/globeb.svg'
+                }
+            }        
+
+        var map, geocoder;
+    
+        function initMap() {
+            console.log(document.getElementById('map'))
+
+            resultsMap = new google.maps.Map(document.getElementById('map'), {
+                zoom: 5,
+                center: { lat: 25.276987, lng: 55.296249 },
+
+            } )
+
+            geocoder = new google.maps.Geocoder();
+            console.log(geocoder)
+            var h = document.getElementById('city').value
+            console.log(h)
+            geocoder.geocode({ 'address': h.split(",")[0] }, function (results, status) {
+                console.log("geocode ",status)
+                if (status === 'OK') {
+                    resultsMap.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        map: resultsMap,
+                        position: results[0].geometry.location,
+                        animation: google.maps.Animation.BOUNCE
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            })
+
+
+        }
+        
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9fFYs8s3_zegXvVPCbk0OFyYynyX59cM&callback=initMap">
+
+    </script>
+<div class="mobile-notice">
+          
+        <script>
+if(navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)) {
+  document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+}
+</script>
+        
+          <div class="inner-mob">
+              <div class="mob-head">
+              <img src="img/logo.png">
+               <div class="mob-right"> Home</div>
+              </div>
+          <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+          <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+                  <div class="input-box ">
+                                  <p class="input-label">Email Address</p>
+                                  <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text"></div>
+              <div class="mob-submit">Subscribe</div>
+          </div>
+      
+      
+      </div>
+
+</body>
+
+</html>

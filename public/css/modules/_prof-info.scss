@@ -1,0 +1,360 @@
+.prof-heading {
+    margin-top: 32px;
+    margin-bottom: 38px;
+    display: table;
+    width: 100%;
+    height: fit-content;
+
+}
+
+.prof-title {
+ float: left;
+    font-family: $fb;
+    font-size: 17.6px;
+    
+}
+
+.prof-subtitle {
+    float: right;
+    font-family: $fr;
+    color:  #cfcfcf;
+    font-size: 11.2px;
+    text-align: right;
+    width: 287px;
+}
+
+.prin-container {
+    width: 928px;
+    height: fit-content;
+margin-bottom: 50px;
+}
+
+.prof-table {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+
+}
+
+.pref-col1-inner {
+    margin-top: 10px;
+    padding-left: 14px;
+       width: 266px;
+    padding-right: 42px;
+}
+
+.pref-col1 {
+    width: fit-content;
+    display: table-cell;
+    width: fit-content;
+    
+}
+
+.pref-col2 {
+
+    display: table-cell;
+    width: 1.1px;
+    border-left: solid 0.8px #ebebeb;
+    padding-left: 1px;
+
+}
+
+.prof-prog {
+    font-family: $fm;
+    font-size: 12.8px;
+    color:$deep-sky-blue;
+    margin-left: auto   ;
+    margin-right: auto;
+    width: 91%;
+    h{
+        float:right;
+    }
+    
+    
+}
+
+.prof-steps {
+    margin-left: 30px;
+    margin-top: 24px;
+    margin-bottom: 31px;
+}
+
+.prof-step {
+    font-family: $fb;
+    font-size: 12.8px;
+    padding: 12px 0px;
+    color: $greyish;
+    cursor: pointer;
+    
+}
+
+.pref-sel {
+    color: black;
+    cursor: default;
+}
+
+.pref-col3 {
+    display: table-cell;
+    
+    width: 100%;
+    div,p,input{color: $greyish-brown ;}
+}
+
+.prof-form {
+    width: 516px;
+    margin-left: auto;
+    .textI{
+        margin-top: 0px;
+    }
+    .sh-box{
+        width: 100%;
+    }
+    .drpar{
+        top: 17px;
+    }
+}
+
+.pref-twocol {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    
+}
+
+.ph-no {
+    width: 192px;
+    margin-right: auto;
+}
+
+.em-box {
+    width: 298px;
+}
+
+.prof-btn {
+    @include sm-btn;
+    width: 100%;
+    margin-top: 28px;
+    padding:  15px 1px 12px 1px;
+}
+
+.tra-heading {
+    margin-bottom: 16px;
+    font-family: $fb;
+    font-size: 19.2px;
+    color:black !important;
+}
+
+.next-trav {
+@include    sm-btn;
+    width: 100%;
+      background-color: $tealish;
+    margin-top: 29px;
+     padding:  15px 1px 12px 1px;
+}
+
+.pref-done {
+    color: $deep-sky-blue !important;
+  
+}
+
+.prof-cards-container {
+ overflow: visible;
+      width:100%;
+    margin-left: 20px;
+    .textI{
+        margin-top: 0px;
+    }
+}
+
+.cards-row {
+display: flex;
+    width: fit-content;
+}
+
+.prof-card {
+    margin: 30px 0px 0px 19px;
+ width: 306px;
+  height: 183px;
+  border-radius: 8px;
+  background-color: #474747;
+  box-shadow: 1px 3px 10px 1px rgba(197, 197, 197, 0.5);  
+    div{ color: white !important;}
+}
+
+.prof-card-box {
+      @include sh-box;
+    width: 348px;
+  height: 320px;
+    margin:0px 8px;
+    .input-box{
+        margin: 20px 22px 0px 19px;
+    }
+}
+
+.rem-card {
+    @extend .next-trav;
+    margin-top: 10px;
+}
+
+.sett-steps {
+    @extend .prof-step;
+    margin-left: 0px;
+}
+
+.prof-sett-button {
+    @include sm-btn;
+    width: 100%;
+     padding:  15px 1px 12px 1px;
+    margin: 7px 0px;
+    color: white !important;
+}
+
+.sett-step {
+    @extend .prof-step;
+    color: black;
+}
+
+.sett-done {
+    color: $deep-sky-blue !important;
+    cursor: default;
+}
+
+.sett-form {
+    @extend .prof-form;
+    width: 572px;
+        margin-top: 33px;
+    h{
+        margin-right: 35px;
+    }
+}
+
+.card-info-title {
+    cursor: default;
+    font-family: $fr;
+    font-size: 12.8px;
+    margin-bottom: 9px;
+}
+
+.card-value {
+    font-family: $fb;
+    font-size: 16px;
+}
+
+.card-info-e {
+    float: left;
+    width: 131px;
+}
+
+.card-info-cvv {
+    float: left;
+}
+
+.card-info {
+        padding-top: 77px;
+    padding-left: 13px;
+}
+
+.card-e-cvv {
+    padding-top: 17px;
+     padding-left: 13px;
+}
+.prof-formtr {
+    width: 629px;
+}
+
+.traveler-head {
+      width: 206px;
+    height: 38px;
+    padding-top: 14px;
+    padding-bottom: 6px;
+
+  border-radius: 8px;
+  background-color: $deep-sky-blue;
+  box-shadow: 1px 3px 10px 1px rgba(197, 197, 197, 0.5);
+    font-family: $fm;
+  font-size: 13.6px;
+  font-weight: 500;
+line-height: 1.18;
+    text-align: center;
+    color: #ffffff;
+}
+
+.new-traveler {
+    .pref-col2{
+    width: 9px;
+    background-color: #ebebeb;
+        border-radius: 10px;}
+    .ph-no, .ps-no,.em-box,.Surname{
+        width: 301px;
+    }
+    .pref-col1-inner {
+        width: 242px;
+        padding-right: 0px;
+    }
+    .fname .initaial .textI .ccode{
+        .textI{
+        width: 55%;}
+        margin-right: 0;
+    }
+    
+}
+
+.fname {
+    @extend .ph-no;
+    display: flex;
+    .initaial{
+        width: 85px;
+        margin-right: auto;
+          .textI{
+        width: 105%;
+    }
+    }
+    .sh-box{
+        display: flex;
+            width: 110%;
+    }
+  
+    
+}
+
+.dob {
+    width: 301px;
+    .sh-box{ display: flex;}
+}
+
+.nationality {
+    .sh-box{display: flex;}
+}
+
+.ps-isuer {
+    .sh-box{
+        display: flex;
+    }
+    width: 301px;
+}
+
+.new-chk {
+    margin-bottom: 60px;
+    .input-label{
+        font-family: $fb;
+    }
+}
+
+.cc-submit {
+    @include sm-btn;
+    background-color: $tealish;
+    padding: 13px 0px 15px 0px;
+    width: 301px;
+    color: white !important;
+    font-size: 13.4px;
+}
+
+.new-chkl {
+    margin-bottom: -50px;
+}
+.country {
+    width: 100% !important;
+}
+.aa-dropdown-menu{
+    box-shadow: 1px 4px 12px 1px rgba(197, 197, 197, 0.5);
+}

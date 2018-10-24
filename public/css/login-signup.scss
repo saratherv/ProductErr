@@ -1,0 +1,23 @@
+@import "modules/super.scss";
+@import "modules/forms.scss";
+@import "modules/common.scss";
+@import "modules/dropdown.scss";
+@import "modules/pref-list.scss";
+@import "modules/signup.scss";
+#hidehotels,#hidefood,#activityhide{ 
+position: absolute;
+z-index: 1;
+ background-color: white;}
+ #hidefood,#hidehotels,#activityhide{
+     width: 231px;
+ }
+ .sign-inner{
+     .twocol{
+         margin-bottom: 63px;
+     }
+ }
+ .sign-pref2{
+    .twocol{
+        margin-bottom: 96px;
+    }
+}

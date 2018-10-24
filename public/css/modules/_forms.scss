@@ -1,0 +1,46 @@
+@mixin dropdown {
+    content: '\f078';
+    font: normal normal normal 11px/1 FontAwesome;
+    color: #0ebeff;
+    right: 19px;
+    top: 4px;
+    height: 34px;
+    padding: 15px 0px 0px 8px;
+    position: absolute;
+    pointer-events: none;
+}
+@mixin combined {
+    margin-left: 40px;
+    height: 100%;
+    border: none;
+    -webkit-appearance: none;
+    font-family: $f  ; letter-spacing :  0.1px;
+    
+    font-weight: 500;
+}
+
+.input-box {
+    margin-bottom: 27px;
+    .input-label {
+        cursor:default;
+        margin: 0px;
+        margin-left: 10px;
+        font-family: $fm;
+        font-size:  13.3px;
+        font-color:#939393;
+		margin-bottom: 10px;
+    }
+    .textI {
+    padding-top:13px;
+        padding-bottom: 13px;
+        -webkit-appearance: none;
+        padding-left: 20px;
+        border: 0px;
+        font-size: 14px;
+        font-family: $fm;
+       
+        width: calc(100% - 20px );
+   
+        @include sh-box;
+    }
+}

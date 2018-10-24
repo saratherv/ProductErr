@@ -1,0 +1,195 @@
+
+.signup-box {
+    @include sh-box;
+    width: 632px;
+    height: fit-content;
+      margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: none;
+    margin-bottom: 100px;
+}
+
+.sign-form {
+    padding: 68px 64px 0 52px;
+    p,div,input{
+         color: $greyish-brown;
+    }
+    .textI{
+        margin-top: 0px;
+    }
+    .sh-box{
+        width: 100%;
+    }
+    .drpar{
+        top: 17px;
+    }
+}
+
+.sign-title {
+    padding-left: 9px;
+    cursor: default;
+    font-family: $fb;
+    float: left;
+    font-size: 24px;
+    color:$deep-sky-blue !important;
+}
+
+.sign-heading {
+    padding-bottom: 50px;
+}
+
+.sign-cross {
+    float: right;
+    width: 19px;
+  height: 19px;
+    fill:$deep-sky-blue;
+    cursor: pointer;
+    padding-right: 10px;
+}
+.pref-twocol {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    
+}
+
+.ph-no {
+    width: 192px;
+    margin-right: auto;
+}
+
+.em-box {
+    width: 298px;
+}
+
+.signup-disc {
+    font-family: $fm;
+    font-size: 11.2px;
+  font-weight: 500;
+  line-height: 1.29;
+    color: $greyish-brown;
+}
+.prof-btn {
+    @include sm-btn;
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 41px;
+    padding:  15px 1px 12px 1px;
+    color:white !important;
+    
+}
+.fb-btn {
+    margin-top: 27px !important;
+ @include sm-btn;
+    @include sh-box;
+    background-color: #3f5e95;
+    color: white !important;
+    padding: 4px 1px 12px 1px;
+
+     
+}
+
+.btn-logo {
+      width: 20px;
+  height: 20px;
+        position: relative;
+    top: 4px;
+        margin-right: 12px;
+}
+
+.gl-btn {
+        margin-top: 16px !important;
+     margin-bottom: 67px !important;
+ @include sm-btn;
+    @include sh-box;
+ background-color: white;
+    padding: 4px 1px 12px 1px;
+  color: #838383 !important;
+    border: solid 1.6px #818181;
+}
+
+.sign-inner {
+    display: table;
+        padding-top: 20px;
+}
+
+.sign-col1 {
+    display: table-cell;
+    .pref-box{
+        margin-right: 0;
+    }
+}
+
+.pref-box5 {
+    margin-bottom: 40px;
+}
+
+.pref-box1 {
+    margin-bottom: 59px;
+}
+
+.pref-box2 {
+    margin-bottom: 48px;
+}
+
+.pref-box4 {
+
+}
+
+.pref-box3 {
+        margin-bottom: 52px;
+}
+
+.sign-col2 {
+      top: -25px;
+    width: 100%;
+    position: relative;
+    padding-left: 50px;
+    display: table-cell;
+}
+
+.twocol {
+    .sh-box{
+        margin-bottom: 8px;
+    }
+}
+
+.sign-pref2 {
+        padding-top: 22px;
+}
+
+.sign-pref3 {
+    padding-top: 37px;
+}
+
+.sign-pref4 {
+        padding-top: 43px;
+}
+
+.sign-pref5 {
+        padding-top: 30px;
+}
+
+.prof-btn-pref {
+    margin-top: 0px ;
+}
+
+body{
+}
+.black-container {
+        overflow-y: scroll;
+    display: none;
+  position: fixed;
+    width: 100%;
+    z-index: 11;
+    background-color: #333333;
+    height: 100%;
+}
+
+
+.visible{
+    display: block !important;
+   
+}

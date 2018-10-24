@@ -1,0 +1,476 @@
+@import "modules/super.scss";
+@import "modules/landing-menu.scss";
+@import "modules/footer.scss";
+@import "modules/common.scss";
+@import "modules/landing-page-components.scss";
+@import "modules/dropdown.scss";
+@import "modules/forms.scss";
+
+.aplha-l-cover {
+    margin-top: 3px;
+    background-image: url("../img/hero-home.png");
+
+    background-size: cover;
+    height: 609px;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.alpha-container {
+    width: 1440px;
+    margin: auto;
+}
+
+.alpha-cover-text {
+    font-family: $f;
+    font-size: 36px;
+    color: white;
+    position: relative;
+    letter-spacing: 1px;
+    font-weight: bold;
+    left: calc( 50% - 200px);
+    width: 400px;
+    top: 35%;
+    text-align: center;
+}
+
+.alpha-cover-btn {
+    @include sm-btn;
+    position: relative;
+    top: 48%;
+    left: 45%;
+
+    padding: 13px 1px 12px 1px;
+    width: 139px !important;
+    font-size: 16.4px;
+    box-shadow: none;
+}
+
+.alpha-cover-sub {
+    font-family: $f;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    top: 69%;
+    left: 46.5%;
+
+}
+
+.aplha-sample-item {
+    background-image: url("../img/beach.png");
+    width: 694px;
+    height: 347px;
+    border-radius: 8px;
+    background-color: gray;
+
+}
+
+.alpha-grid {
+    display: grid;
+    grid-column-gap: 37px;
+
+    grid-template: '1fr 1fr';
+}
+
+.alpha-grid-container {
+    width: 924px;
+    margin: 50px auto 0px auto;
+}
+
+.aplha-sample-item-text {
+    position: relative;
+    width: 130px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: right;
+    font-family: $fm;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    float: right;
+    top: 213px;
+    left: 109px;
+    margin-right: 33px;
+}
+
+.aplha-sample-item-head {
+    cursor: pointer;
+    position: relative;
+    font-family: $fm;
+    width: fit-content;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    float: right;
+    background-color: white;
+    color: $deep-sky-blue;
+    border-radius: 8px;
+    padding: 9px 15px;
+    top: 169px;
+    margin-right: 33px
+}
+
+.sapmle-iter-head {
+    width: 192px;
+    height: 44px;
+    font-family: $fm;
+    font-size: 22.4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $black;
+
+}
+
+.aplha-long1 {
+
+    grid-row: span 8;
+
+}
+
+.sample-iter-c {
+    width: 196px;
+    .trip-container {
+        margin-top: 20px;
+    }
+}
+
+.alpha-long1-text {
+    @extend .aplha-sample-item-text;
+    font-size: 32px;
+    text-align: left;
+    top: 598px;
+    left: 27px;
+    float: none;
+}
+
+.aplha-disc-i {
+    float: left;
+    font-family: $fm;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: $deep-sky-blue;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 9px 20px;
+
+}
+
+.aplha-disc-c {
+    width: 830px;
+    padding: 24px 0 24px 0px;
+
+    grid-column: 1 /3;
+}
+
+.aplha-disc-h {
+    font-family: $fm;
+    padding-top: 7px;
+    font-size: 22.4px;
+    font-weight: bold;
+    padding-top: 7px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+    color: $black;
+    float: left;
+}
+
+.alpha-two-box {
+    grid-column: 1 / 3;
+}
+
+.box1 {
+    float: left;
+    width: 393px;
+    height: 230px;
+    border-radius: 8px;
+    background-image: url("../img/box1.png");
+    .aplha-sample-item-text {
+        float: none;
+        text-align: left;
+        top: 22px;
+        left: 18px;
+        width: 150px;
+
+    }
+    .aplha-sample-item-head {
+        color: black;
+        float: none;
+        top: 35px;
+        left: 18px;
+        cursor: pointer;
+    }
+}
+
+.box2 {
+    width: 510px;
+    height: 230px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    float: right;
+    .input-box {
+        width: 441px;
+        margin: 0px 35px 14px 35px;
+    }
+}
+
+.box2-heading {
+    font-family: $fm;
+    font-size: 22.4px;
+    margin: 39px 0px 21px 36px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}
+
+.box2-sub-heading {
+    ont-family: $fm;
+    font-size: 12.8px;
+    font-weight: 500;
+    margin: 0 0 18px 35px;
+    color: $greyish-brown;
+}
+
+.box-2-btn {
+
+    @include sm-btn;
+    margin: 0px 35px;
+    width: calc( 100% - 70px);
+}
+
+.alpha-yt-box {
+overflow:hidden;
+    height: 475px;
+    grid-column: 1 / 3;
+    margin-top: 42px;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+}
+
+.alpha-feat-box {
+    padding: 57px 8px;
+    grid-column: 1 /3;
+}
+
+.alpha-feat1 {
+    width: 233px;
+    float: left;
+    font-family: $fm;
+    font-size: 13.6px;
+    font-weight: 500;
+
+    line-height: 1.18;
+
+    text-align: justify;
+
+
+    margin-right: 100px;
+}
+
+.alpha-feat2 {
+    margin-right: 0px;
+}
+
+.h {
+    margin-bottom: 15px;
+    font-family: $fm;
+    font-size: 17.8px;
+    font-weight: bold;
+
+
+
+
+
+}
+
+.aplha-bookbox {
+    width: 926px;
+    height: 315px;
+    background-image: url("../img/bokk.png");
+    border-radius: 8px;
+    grid-column: 1/3;
+    background-size: cover;
+    .aplha-sample-item-head {
+        float: none;
+        background-color: $aquamarine;
+        font-size: 12.8px;
+        color: white;
+        left: 27px;
+        top: 172px;
+        padding: 14px 54px;
+
+
+
+    }
+    .aplha-sample-item-text {
+        float: none;
+        left: 27px;
+        top: 151px;
+
+        width: 287px;
+        text-align: left;
+    }
+
+}
+
+.alpha-bottom {
+    width: 926px;
+    grid-column: 1/3;
+    margin-bottom: 30px;
+    margin-top: 45px;
+}
+
+.alpha-team-image {
+    width: 422px;
+    height: 187px;
+    background-image: url("../img/team.png");
+    float: right;
+    border-radius: 8px;
+
+    .aplha-sample-item-text {
+        float: none;
+        left: 20px;
+        top: 20px;
+
+        width: 70px;
+        text-align: left;
+    }
+}
+
+.alpha-tem-boxs {
+    position: relative;
+    top: 330px;
+    left: 20px;
+}
+
+.alpha-tem-box {
+    border-radius: 8px;
+    background-color: #76422d;
+    padding: 9px 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    float: left;
+    font-family: $f;
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+}
+
+.no-float {
+    div {
+        float: none !important;
+        width: fit-content;
+    }
+}
+
+.alpha-team-names {
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    width: 496px;
+    margin-left: 8px;
+}
+
+.member-post {
+    font-family: $fr;
+    font-size: 12.8px;
+    font-weight: bold;
+    padding-top: 10px;
+    line-height: 1.25;
+    width: 77px;
+    color: $deep-sky-blue;
+}
+
+.member-name {
+    font-family: $fm;
+    font-size: 17.8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $greyish-brown;
+}
+
+.alpha-team-member {
+    padding-top: 8px;
+    width: 120px;
+    padding-bottom: 21px;
+    height: fit-content;
+
+}
+
+.long1-c {
+    width: 375px;
+    height: 926px;
+    background-image: url("../img/long1.png");
+}
+
+.long2-c {
+    margin-top: 36px;
+    width: 375px;
+    height: 1288px;
+    border-radius: 8px;
+    background-image: url("../img/long2.png");
+}
+
+.alpha-count {
+    position: relative;
+    top: 24px;
+    left: 55px;
+    font-family: $fm;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #17292c;
+    div {
+        float: left;
+        padding-right: 50px;
+    }
+
+
+}
+
+
+.aplha-count-sub {
+    position: relative;
+    top: 18px;
+    left: 76px;
+    font-family: $fm;
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+    letter-spacing: 1px;
+
+    color: #17292c;
+    div {
+        float: left;
+
+        padding-right: 73px;
+    }
+
+}
+
+.count-disc {
+    position: relative;
+    width: 305px;
+    top: 1168px;
+
+    left: 50px;
+    font-family: $fm;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+
+
+
+
+

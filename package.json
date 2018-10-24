@@ -1,0 +1,31 @@
+{
+  "name": "trift",
+  "version": "0.1.0",
+  "main": "app.js",
+  "author": "Rajeev Sarathe",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "*",
+    "cookie": "^0.3.1",
+    "cookies": "^0.7.2",
+    "date-and-time": "^0.6.2",
+    "dateformat": "*",
+    "ejs": "*",
+    "express": "~4.13.3",
+    "express-session": "*",
+    "moment": "*",
+    "moment-duration-format": "^2.2.2",
+    "mongodb": "^3.1.4",
+    "mongoose": "^5.2.14",
+    "nodemon": "^1.18.4",
+    "number-to-words": "*",
+    "passport": "*",
+    "passport-google-oauth": "*",
+    "request": "*",
+    "zomato": "^1.1.0",
+    "recombee-api-client": "*"
+  }
+}

@@ -1,0 +1,96 @@
+
+.cover {
+
+    img{
+        object-fit: cover;
+    }
+	iframe{
+    position: relative;
+    top: -68px;
+}
+background: url('../img/cover.jpg');
+    border-radius: 10px;
+    background-color: $white-two;
+    height: 315px;
+    width: 945px;
+    background-size: cover;
+	overflow:hidden;
+}
+
+.cover-notch {
+	z-index:2;
+    background-color: white;
+    width: 193px;
+    height: 68px;
+    border-radius: 10px;
+    position: relative;
+    top: 231px;
+    left: 736px;
+}
+
+.cover-dp {
+    font-family: $fb;
+    background-image: url('../img/dp.jpg');
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-size: cover;
+    position: absolute;
+    left: 17px;
+    top : 10px;
+}
+.n-cover-dp{
+     font-family: $fb;
+    background-image: url('../img/dp.jpg');
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-size: cover;
+    position: absolute;
+}
+
+.cover-name {
+    font-family: $fb;
+    font-size: 16px;
+    font-weight: bold;
+    color: $black;
+    font-size: 16px;
+    position: absolute;
+    left: 73px;
+    top: 21px;
+}
+
+.cover-handle {
+    font-family: $fm;
+    font-size: 12.8px;
+    position: absolute;
+    left: 73px;
+    top: 41px;
+    color: $linkc;
+}
+.hero {
+    max-width: 946px;
+    margin:auto;
+    img{ border-radius: 10px;}
+    
+}
+
+.n-notch {
+        flex-wrap: wrap;
+    position: relative;
+    left: 76px;
+    width: 99px;
+    display: flex;
+    top: -37px;
+    .cover-name , .cover-handle{
+        position: static !important;
+        
+      
+    }
+    .cover-name {
+    padding-top: 11px;
+    }
+    .cover-handle{
+        margin-top: 4px;
+    }
+}

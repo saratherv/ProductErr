@@ -1,0 +1,303 @@
+@font-face {
+  font-family: "Objectivity";
+  src: url("font/Objectivity-regular.woff2") format("woff2"); }
+@font-face {
+  font-family: "Objectivity-Bold";
+  src: url("font/Objectivity-Bold.woff2") format("woff2"); }
+@font-face {
+  font-family: "Objectivity-Medium";
+  src: url("font/Objectivity-Medium.woff2") format("woff2"); }
+h1 {
+  font-family: Objectivity-Medium; }
+
+/* Color palette */
+.landbar-notch {
+  cursor: pointer;
+  background-color: #2789f0;
+  border-radius: 4px;
+  float: right;
+  height: 33px;
+  width: 33px;
+  margin-right: 15px; }
+
+#divider {
+  width: 100%;
+  border-bottom: solid 1px #e1e1e1e0; }
+
+.container {
+  max-width: 946px;
+  margin: auto; }
+
+#section1 {
+  margin-top: 41px; }
+
+.input-box {
+  margin-bottom: 27px; }
+  .input-box .input-label {
+    margin: 0px;
+    font-family: Objectivity-Medium;
+    font-size: 12.8px;
+    font-color: #939393; }
+  .input-box .textI {
+    -webkit-appearance: none;
+    padding-left: 20px;
+    border: 0px;
+    margin-top: 10px;
+    font-family: Objectivity-Medium;
+    font-weight: 500;
+    width: -webkit-fill-available;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 1px 4px 12px 1px rgba(197, 197, 197, 0.5); }
+
+.flight-box {
+  border-radius: 8px;
+  box-shadow: 1px 4px 12px 1px rgba(197, 197, 197, 0.5);
+  width: 584.8px;
+  flex-basis: 584.8px;
+  flex-grow: 0;
+  flex-shrink: 0; }
+
+.inner-box {
+  padding: 32px 27px 25px 32px; }
+
+.uppper-table {
+  display: table;
+  margin-bottom: 16px; }
+
+.inner2 {
+  display: table-cell;
+  width: 0.1px;
+  border: solid 0.8px #ebebeb; }
+
+.landbar-notch {
+  float: left; }
+
+.flight-company-logo {
+  width: 69px;
+  height: 22px;
+  margin-bottom: 30px;
+  padding-top: 8px; }
+
+.inner1 {
+  display: table-cell;
+  width: 202px;
+  padding-right: 25px; }
+
+.inner3 {
+  padding-left: 18px;
+  vertical-align: -webkit-baseline-middle;
+  display: table-cell;
+  width: 325px; }
+
+.time {
+  width: 40px;
+  display: table-cell;
+  font-family: Objectivity;
+  font-size: 9.6px;
+  color: #525252; }
+
+.portname {
+  font-family: Objectivity-Bold;
+  font-size: 12.8px;
+  color: #525252;
+  padding-bottom: 15px; }
+
+.terminal {
+  font-family: Objectivity;
+  font-size: 9.6px;
+  color: #525252; }
+
+.nts {
+  display: table-cell;
+  padding-left: 15px; }
+
+.travel-time {
+  margin: 15px 0px 15px 55px;
+  height: 33px;
+  display: table;
+  font-family: Objectivity;
+  font-size: 9.6px; }
+  .travel-time div {
+    vertical-align: middle;
+    display: table-cell; }
+  .travel-time .stopover {
+    color: #2789f0;
+    padding-right: 8px;
+    padding-left: 8px; }
+
+.flight-day-time {
+  display: table;
+  margin-top: 35px;
+  height: 25px; }
+  .flight-day-time div {
+    padding: 8px 12px 5px 10px;
+    float: left;
+    border-radius: 8px;
+    vertical-align: middle;
+    height: 100%;
+    font-family: Objectivity;
+    font-size: 11.2px;
+    color: #ffffff;
+    margin-left: auto; }
+  .flight-day-time .flight-day {
+    background-color: #404040;
+    margin-right: 8px; }
+  .flight-day-time .flight-time {
+    background-color: #2789f0; }
+
+.dropdown {
+  margin-top: 10px;
+  width: -webkit-fill-available;
+  position: relative; }
+  .dropdown select {
+    border-radius: 8px;
+    box-shadow: 1px 4px 12px 1px rgba(197, 197, 197, 0.5);
+    padding: 0px 20px;
+    margin-left: 40px;
+    height: 100%;
+    border: none;
+    -webkit-appearance: none;
+    font-family: Objectivity;
+    font-weight: 500;
+    margin: 0px;
+    right: 10px;
+    height: 40px;
+    top: 0px;
+    width: 100%;
+    background-color: #f3f3f3; }
+
+.dropdown:after {
+  content: '\f078';
+  font: normal normal normal 11px/1 FontAwesome;
+  color: #0ebeff;
+  right: 19px;
+  top: 4px;
+  height: 34px;
+  padding: 15px 0px 0px 8px;
+  position: absolute;
+  pointer-events: none;
+  padding: 13px 0px 0px 0px; }
+
+.input-box {
+  margin-bottom: 24px; }
+
+.fn-container {
+  padding: 11px 17px;
+  height: 31.8px; }
+
+.num-flight {
+  width: 0px;
+  float: left;
+  padding: 10px 12px 10px 6px;
+  font-family: Objectivity;
+  font-size: 11.6px;
+  border-radius: 4.4px;
+  background-color: #2789f0;
+  color: white; }
+
+.flight-name {
+  padding-left: 23px;
+  margin-top: 7px;
+  font-size: 11.2px;
+  font-family: Objectivity-Bold; }
+
+.plane-name {
+  padding-left: 23px;
+  margin-top: 2px;
+  font-size: 11.2px;
+  font-family: Objectivity;
+  color: #525252; }
+
+.baggage-container {
+  margin-top: 16px;
+  width: 100%;
+  display: table; }
+
+.hand {
+  margin-left: auto;
+  display: table-cell; }
+
+.luggage {
+  display: table-cell; }
+
+.plane-namem {
+  font-size: 11.2px;
+  font-family: Objectivity;
+  color: #525252; }
+
+.lquant {
+  margin-top: 7px;
+  font-size: 11.2px;
+  font-family: Objectivity-Bold; }
+
+.hquant {
+  margin-top: 7px;
+  font-size: 11.2px;
+  font-family: Objectivity-Bold; }
+
+.box-priceline {
+  float: left;
+  width: 157px;
+  font-size: 9.6px;
+  font-family: Objectivity;
+  color: #525252; }
+
+.box-price {
+  float: right;
+  font-family: Objectivity-Bold;
+  color: #2789f0;
+  font-size: 17.6px; }
+  .box-price .currn {
+    padding-top: 2px;
+    float: left;
+    font-size: 14.4px; }
+  .box-price .tot {
+    padding-left: 4px;
+    float: right; }
+
+.box-bottom {
+  padding-top: 23px;
+  height: 18px; }
+
+.action-box {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 1px 4px 12px 1px rgba(197, 197, 197, 0.5);
+  width: 320px;
+  flex: 1; }
+
+.travel-box {
+  display: flex; }
+
+.action-box-container {
+  margin-left: 25px;
+  display: table-cell; }
+
+.fl-arrows {
+  float: right; }
+  .fl-arrows img {
+    margin-left: 10px;
+    padding-bottom: 4px; }
+
+.fl-tl-title {
+  float: left;
+  font-family: Objectivity-Medium;
+  font-size: 12.8px;
+  color: #2789f0; }
+
+.fl-timeline-container {
+  margin-top: 34px;
+  display: flex; }
+
+.fl-title-container {
+  height: 13px; }
+
+.left-border {
+  flex: 1;
+  height: 100%;
+  width: 4.8px;
+  border-radius: 4.4px;
+  background-color: #e6e6e6; }
+
+/*# sourceMappingURL=travelcomopnents.css.map */

@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> trift</title>
+    <link rel="stylesheet" type="text/css" href="css/aplha-landing.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+<script src="js/info.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+            <%- include('./header'); %>
+        
+        
+
+        <div class="alpha-container">
+
+            <div class="aplha-l-cover">
+                <div class="alpha-cover-text">It’s a beautiful world out there.</div>
+                <div class="alpha-cover-btn">Explore</div>
+                <div class="alpha-cover-sub">2018 edition</div>
+            </div>
+        </div>
+        <div class="alpha-grid-container">
+            <div class="alpha-grid">
+                    <a href="/info?partit=<%= items[0].title %>">
+                <div class="aplha-sample-item">
+                    <div class="aplha-sample-item-head">Alpha</div>
+                    <div class="aplha-sample-item-text">check out our sample trip
+                    </div>
+
+                </div>
+                    </a>
+                    <a href="/info?partit=<%= items[0].title %>">
+                <div class="sample-iter-c">
+                    <div class="sapmle-iter-head">Spotlight Destination</div>
+                    <div class="trip-container">
+                        <div class="photo">
+                        </div>
+
+                        <div class="tr-nights "> <%= items[0].days %> Nights</div>
+							<h1 class="trip-title"><%= items[0].title %></h1>
+						<p class="trip-creater"><%= items[0].auth %></p>
+						<div class="trip-price"><%= items[0].price %></div>
+                        <div class="trip-curr"><%= items[0].currency %></div>   
+                                     </div>
+
+                </div>
+            </a>
+           
+                <!--
+                <div class="aplha-long1">
+                    <div class="long1-c">
+                        <div class="alpha-long1-text">Explore the hidden niches of the world through the lens of a creator</div>
+                    </div>
+                    <div class="long2-c">
+                        <div class="alpha-count">
+
+                            <div class="dad">44</div>
+                            <div class="hah">11</div>
+                            <div class="mam">21</div>
+
+                        </div>
+                        <div class="aplha-count-sub">
+                            <div class="dad">DD</div>
+                            <div class="hah">HH</div>
+                            <div class="mam">MM</div>
+                        </div>
+                        <div class="count-disc">closer to launching beta version</div>
+                    </div>
+                </div>!-->
+                <div class="trip-component" style="grid-column: 1/3">
+                    <div class="trip-heading">
+                        <h1 class="ttitle"> Other Trips</h1>
+                      
+                    </div>
+                    <div class="trip-carousal">
+                        <% for(var i=1;i<=4;i++){ %>
+                            <a href="/info?partit=<%= items[i].title %>">
+                        <div class="trip-container">
+                            <div class="photo">
+                            </div>
+                            <div class="tr-nights "> <%= items[i].days %> Nights</div>
+							<h1 class="trip-title"><%= items[i].title %></h1>
+						<p class="trip-creater"><%= items[i].auth %></p>
+						<div class="trip-price"><%= items[i].price %></div>
+                        <div class="trip-curr"><%= items[i].currency %></div>  
+                        </div></a> <% } %>
+                       
+                       
+                       
+    
+                    </div>
+                </div>
+                <div class="aplha-disc-c">
+                    <div class="aplha-disc-i">New</div>
+                    <div class="aplha-disc-h">We’re currently running on our Alpha version.</div>
+                </div>
+                <div class="alpha-two-box">
+                    <div class="box1">
+                        <div class="aplha-sample-item-text">Get exclusive access to the Beta Version.</div>
+                        <div class="aplha-sample-item-head">Subscribe</div>
+
+                    </div>
+                    <div class="box2">
+                        <div class="box2-heading">Want to know more? Subscribe</div>
+
+                        <div class="input-box ">
+                            <p class="input-label"> Enter Email Address</p>
+                            <input class="textI " name="iter-title" value="hello@trift.io" type="text"></div>
+                        <div class="box-2-btn">Subscribe</div>
+                    </div>
+
+
+                </div>
+                <div class="alpha-yt-box"style="
+                width: 927px;
+            ">
+                        <iframe width="927" height="475" src="https://www.youtube.com/embed/buLAItfdldY?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="alpha-feat-box">
+
+
+                    <div class="alpha-feat1">
+                        <div class="h">Trips curated just for you</div>
+                        <div>
+                            We learn about your interests and preference and suggest you the most personalized ones everytime
+                        </div>
+                    </div>
+                    <div class="alpha-feat1">
+                        <div class="h">Itineararies made simple</div>
+                        <div>
+                            Itineraries presented in the most simple form all you have to do is to follow and enjoy your stay
+                        </div>
+                    </div>
+                    <div class="alpha-feat1 alpha-feat2 ">
+                        <div class="h">Curated by the travelers</div>
+                        <div>
+                            Trips curated people around the world to give you the most realistic experiences
+                        </div>
+                    </div>
+                </div>
+                <div class="aplha-bookbox">
+
+                    <div class="aplha-sample-item-text">book the whole trip from the comfort of your home</div>
+                    <button class="aplha-sample-item-head" onclick="unhidesig()">Sign Up</button>
+                </div>
+                <div class="alpha-bottom">
+                    <div class="alpha-team-names">
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Mohamed <br> Nawaz
+
+                            </div>
+                            <div class="member-post">Strategy and Partnerships</div>
+
+                        </div>
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Tarun <br> Krishna
+                            </div>
+                            <div class="member-post">Product and Design</div>
+
+                        </div>
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Ryan <br> Shirley
+
+                            </div>
+                            <div class="member-post">Creative Content
+                            </div>
+
+                        </div>
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Rajeev <br> Sarathe
+
+                            </div>
+                            <div class="member-post">Technology Lead</div>
+
+                        </div>
+
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Rohit <br> Sahu
+
+                            </div>
+                            <div class="member-post">Frontend Developer
+                            </div>
+
+                        </div>
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Niyati <br> Khandelwal
+
+                            </div>
+                            <div class="member-post">Backend Developer
+                            </div>
+
+                        </div>
+                        <div class="alpha-team-member">
+                            <div class="member-name">
+                                Prerna <br> Joshi
+
+                            </div>
+                            <div class="member-post">Backend Developer
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+                    <div class="alpha-team-image">
+                        <div class="aplha-sample-item-text">the team
+                        </div>
+
+                        <!--     <div class="alpha-tem-boxs">
+                            <div class="no-float">
+                                <div class="alpha-tem-box">Business</div>
+                            </div>
+                            <div>
+                                <div class="alpha-tem-box">Technology</div>
+                                <div class="alpha-tem-box">Content</div>
+                            </div>
+                        </div>!-->
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+   <!--footer here-->
+   <%- include('./footer'); %>
+   <div class="mobile-notice">
+          
+        <script>
+if(navigator.userAgent.match(/Android/i)
+|| navigator.userAgent.match(/webOS/i)
+|| navigator.userAgent.match(/iPhone/i)
+|| navigator.userAgent.match(/iPad/i)
+|| navigator.userAgent.match(/iPod/i)
+|| navigator.userAgent.match(/BlackBerry/i)
+|| navigator.userAgent.match(/Windows Phone/i)) {
+  document.write('<meta name="viewport" content="width=device-width, user-scalable=no" />');
+}
+</script>
+        
+          <div class="inner-mob">
+              <div class="mob-head">
+              <img src="img/logo.png">
+               <div class="mob-right"> Home</div>
+              </div>
+          <div class="mo-notice-head">Sorry! This screen size is not yet supported</div>
+          <div class="mo-botice-sub">You can use the web version of the same site! We will email you as soon as the mobile version goes live! Subscribe to stay on the loop</div>
+                  <div class="input-box ">
+                                  <p class="input-label">Email Address</p>
+                                  <input class="textI " name="iter-title" value="jtarunkrishna@gmail.com" type="text"></div>
+              <div class="mob-submit">Subscribe</div>
+          </div>
+      
+      
+      </div>
+</body>
+
+</html>
